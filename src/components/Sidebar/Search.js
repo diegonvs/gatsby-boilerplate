@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 
+const algoliaAPIKey = 'algoliaAPIKey';
+const algoliaIndexName = 'indexName';
+
 class Search extends Component {
 	state = {
 		enabled: true
@@ -8,8 +11,8 @@ class Search extends Component {
 	componentDidMount() {
 		if (window.docsearch) {
 			window.docsearch({
-				apiKey: 'bc205a621e5176b8720081c2a3de450c',
-				indexName: 'clay',
+				apiKey: algoliaAPIKey,
+				indexName: algoliaIndexName,
 				inputSelector: '#algolia-doc-search',
 			});
 		} else {
