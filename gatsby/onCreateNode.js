@@ -8,9 +8,12 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			redirect,
 			title,
 			weight,
-			// date,
-			// description
+			date,
+			description,
+			author,
+			mainPage
 		} = node.frontmatter;
+
 		const {relativePath} = getNode(node.parent);
 
 		let slug = path;
@@ -55,18 +58,28 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			value: layout,
 		});
 
-		// if (slug.includes('blog')) {
-		// 	console.error(slug);
-		// createNodeField({
-		// 	node,
-		// 	name: 'date',
-		// 	value: date,
-		// })
+		createNodeField({
+			node,
+			name: 'author',
+			value: author || '',
+		});
 
-		// createNodeField({
-		// 	node,
-		// 	name: 'description',
-		// 	value: description,
-		// })
+		createNodeField({
+			node,
+			name: 'date',
+			value: date || '',
+		});
+
+		createNodeField({
+			node,
+			name: 'description',
+			value: description || '',
+		});
+
+		createNodeField({
+			node,
+			name: 'mainPage',
+			value: mainPage || '',
+		})
 	}
 };
