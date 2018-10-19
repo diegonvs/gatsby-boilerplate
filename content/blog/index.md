@@ -1,7 +1,3 @@
 ---
-layout: "redirect"
-title: "Blog"
-weight: 1
+mainPage: true
 ---
-
-blog list:
