@@ -9,18 +9,21 @@ const createPages = (actions, edges) => {
 	edges.forEach(({node}) => {
 		const {slug, redirect, layout} = node.fields;
 
-		if (redirect) {
+		const {mainPage} = node.frontmatter;
+
+		if (redirect || mainPage) {
 			const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
 			const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
+
+			const toPath = mainPage ? slugWithBar : redirect;
 
 			createRedirect({
 				fromPath,
 				isPermanent: true,
 				redirectInBrowser: true,
-				toPath: redirect,
+				toPath: toPath,
 			});
 		}
-
 
 		let templateKey = slug.split('/')[0];
 
@@ -58,6 +61,9 @@ module.exports = async ({actions, graphql}) => {
 							slug
 							title
 							weight
+						}
+						frontmatter {
+							mainPage
 						}
 						code {
 							scope
