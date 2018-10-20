@@ -19,9 +19,10 @@ export default class BlogMain extends Component {
     render() {
         return (
             <>
-                <h1> {this.props.title ? this.props.title : "Blog" } </h1>
-                <h3> Latest Stories: </h3>
-                <BlogList />
+                <div className="blog-main">
+                    <h1>Latest Stories: </h1>
+                    <BlogList />
+                </div>
             </>
         );
     }
