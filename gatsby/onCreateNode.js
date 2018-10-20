@@ -11,7 +11,8 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			date,
 			description,
 			author,
-			mainPage
+			mainPage,
+			banner
 		} = node.frontmatter;
 
 		const {relativePath} = getNode(node.parent);
@@ -80,6 +81,12 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			node,
 			name: 'mainPage',
 			value: mainPage,
-		})
+		});
+
+		createNodeField({
+			node,
+			name: 'banner',
+			value: banner || ''
+		});
 	}
 };
