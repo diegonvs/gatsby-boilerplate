@@ -49,9 +49,9 @@ export default (props) => (
                                     <p className="clay-p">{description}</p>
                                     <br />
                                     <small style={{float: "right"}}> {`by ${author} at ${date}`}</small>
-                                    <a className="link-primary" href={slug}>
+                                    <Link className="link-primary" to={slug}>
                                         <span className="learn-more">Learn More</span>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         ))}
