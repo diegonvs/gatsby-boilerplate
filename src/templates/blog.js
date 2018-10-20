@@ -1,7 +1,7 @@
 import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import React, { Component } from 'react';
-import SimpleFooter from '../components/SimpleFooter'
+import Footer from '../components/Footer';
 import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
 import BlogMain from '../components/Blog/BlogMain';
@@ -23,17 +23,16 @@ export default class Blog extends Component {
         const { data } = this.props;
         const { mdx: { code, frontmatter: { title, mainPage, date, author }, excerpt, timeToRead } } = data;
 
-
         const githubRepo = "https://github.com/liferay/clay";
 
         return (
             <div className="blog">
                 <Helmet>
-                    <title>{title}</title>
+                    <title>Blog Template</title>
                     <meta name="description" content={excerpt} />
                     <meta name="og:description" content={excerpt} />
                     <meta name="twitter:description" content={excerpt} />
-                    <meta name="og:title" content={title} />
+                    <meta name="og:title" content="Blog Template" />
                     <meta name="og:type" content="article" />
                     <meta name="twitter.label1" content="Reading time" />
                     <meta
@@ -43,8 +42,16 @@ export default class Blog extends Component {
                 </Helmet>
                 <main className="content">
                     <header className="header">
-                        <div className="intro">
-                            <LayoutNav />
+                        <LayoutNav />
+                        <div className="container-fluid">
+                            <div className="row">
+                                <div className="intro blog-intro text-center col">
+                                    <div className="container-fluid container-fluid-max-lg">
+                                        <h1 className="h1">Blog Template</h1>
+                                        <h2 className="h3">Where good ideas come from</h2>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </header>
 
@@ -69,7 +76,7 @@ export default class Blog extends Component {
                     </div>
                 </main>
 
-                <SimpleFooter githubRepo={githubRepo} />
+                <Footer />
             </div>
         );
     }
