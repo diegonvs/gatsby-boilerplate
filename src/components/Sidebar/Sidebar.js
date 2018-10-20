@@ -81,10 +81,6 @@ export default (props) => (
 
 			const logoPath = "/images/home/liferay_logo_black.svg";
 
-			console.log('data: ', data);
-
-			console.log('getSection: ', getSection(data));
-
 			return (
 				<>
 					<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
