@@ -28,8 +28,6 @@ class Navigation extends Component {
     renderNavigationItems() {
         const { sectionList, location, depth = 0 } = this.props;
 
-        console.log('Nav sectionList: ', sectionList);
-
         return sectionList.map((section, index) => {
             let style = classNames({
                 'active': this._isActive(section) === true,

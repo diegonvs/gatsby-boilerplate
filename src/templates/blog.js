@@ -1,12 +1,12 @@
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, { Component } from 'react';
 import SimpleFooter from '../components/SimpleFooter'
 import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
-import Typography from '../components/Typography';
 import BlogMain from '../components/Blog/BlogMain';
+import BlogArticle from '../components/Blog/BlogArticle';
+import LayoutNav from '../components/LayoutNav';
 
 export default class Blog extends Component {
     componentDidMount() {
@@ -21,7 +21,8 @@ export default class Blog extends Component {
 
     render() {
         const { data } = this.props;
-        const { mdx: { code, frontmatter: { title, mainPage }, excerpt, timeToRead } } = data;
+        const { mdx: { code, frontmatter: { title, mainPage, date, author }, excerpt, timeToRead } } = data;
+
 
         const githubRepo = "https://github.com/liferay/clay";
 
@@ -41,36 +42,28 @@ export default class Blog extends Component {
                     />
                 </Helmet>
                 <main className="content">
-                    <header>
-                        <div className="clay-site-container container-fluid">
-                            <h1>{title}</h1>
+                    <header className="header">
+                        <div className="intro">
+                            <LayoutNav />
                         </div>
                     </header>
-                    <div className="clay-site-container container-fluid">
+
+                    <div className="clay-site-container container">
                         <div className="row">
                             <div className="col-md-12">
-                                <article>
 
-                                    {/* renders the main page */}
-                                    {mainPage &&
-                                        <BlogMain title={title} excerpt={excerpt} timeToRead={timeToRead} />
-                                    }
+                                {/*renders a blog post content */}
+                                {!mainPage &&
+                                    <article>
+                                        <BlogArticle title={title} author={author} date={date} codeBody={code.body} location={this.props.location} />
+                                    </article>
+                                }
 
-                                    {/*renders a blog post content */}
-                                    {!mainPage &&
-                                        <MDXRenderer
-                                            components={{
-                                                h1: Typography.H1,
-                                                h2: Typography.H2,
-                                                h3: Typography.H3,
-                                                h4: Typography.H4,
-                                                p: Typography.P,
-                                            }}
-                                        >
-                                            {code.body}
-                                        </MDXRenderer>
-                                    }
-                                </article>
+                                {/* renders the main page */}
+                                {mainPage &&
+                                    <BlogMain title={title} excerpt={excerpt} timeToRead={timeToRead} />
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -91,6 +84,8 @@ export const pageQuery = graphql`
             frontmatter {
                 title
                 mainPage
+                date(formatString: "MMMM DD, YYYY")
+                author
             }
             code {
                 body

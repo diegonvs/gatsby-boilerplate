@@ -79,7 +79,7 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 		createNodeField({
 			node,
 			name: 'mainPage',
-			value: mainPage || '',
+			value: mainPage,
 		})
 	}
 };

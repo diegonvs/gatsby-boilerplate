@@ -47,12 +47,12 @@ export default (props) => (
                                             <div className="card-divider"></div>
                                             <p className="card-text">{description ? description : ''}</p>
                                             <div className="card-divider"></div>
-                                            <p className="card-text">by {author ? author : ''}</p>
+                                            <p className="card-text">{author ? `by ${author}` : ''}</p>
                                         </section>
                                     </div>
                                     <div className="autofit-col">
                                         {/* TODO- Thumbnails */}
-                                        <img className="card-item-last" style={{width: 150+'px', height: 150+'px', backgroundColor: "magenta"}} />
+                                        <img className="card-item-last" src="" style={{width: 150+'px'}} />
                                     </div>
                                 </div>
                             </div>

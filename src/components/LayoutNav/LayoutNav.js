@@ -44,7 +44,7 @@ class LayoutNav extends Component {
 
         const title = 'Gatsby Boilerplate';
 
-        const githubRepo = 'https://github.com/liferay/clay';
+        const githubRepo = 'https://github.com/diegonvs/gatsby-boilerplate';
 
         return (
             <nav ref="navElement" className={styles}>
