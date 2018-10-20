@@ -15,15 +15,18 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query {
-                allMdx(filter: { fields: { slug: { regex: "/^blog/i"}, title: {  ne: "" } } }) {
+                allMdx(filter: { fields: { slug: { regex: "/^blog/i"}, title: {  ne: "" } } },
+                    sort: {order:DESC, fields: frontmatter___date}
+                ) {
                     edges {
                         node {
                             fields {
                                 slug
                                 title
-                                date
+                                date(formatString: "MMMM DD, YYYY")
                                 description
                                 author
+                                banner
                             }
                         }
                     }
@@ -38,22 +41,17 @@ export default (props) => (
             return(
                 <>
                     <BlogList>
-                        {posts.map(({slug, title, description, author}, index) => (
-                            <div key={index} className="card card-horizontal card-rounded">
-                                <div className="card-row">
-                                    <div className="autofit-col autofit-col-expand autofit-col-gutters">
-                                        <section className="autofit-section">
-                                            <Link to={slug}><h3 className="card-title">{title}</h3></Link>
-                                            <div className="card-divider"></div>
-                                            <p className="card-text">{description ? description : ''}</p>
-                                            <div className="card-divider"></div>
-                                            <p className="card-text">{author ? `by ${author}` : ''}</p>
-                                        </section>
-                                    </div>
-                                    <div className="autofit-col">
-                                        {/* TODO- Thumbnails */}
-                                        <img className="card-item-last" src="" style={{width: 150+'px'}} />
-                                    </div>
+                        {posts.map(({slug, title, description, author, banner, date}, index) => (
+                            <div key={index} className="card">
+                                <img className="mx-auto" src={banner} />
+                                <div className="card-body">
+                                    <h2 className="clay-h2 font-weight-bold">{title}</h2>
+                                    <p className="clay-p">{description}</p>
+                                    <br />
+                                    <small style={{float: "right"}}> {`by ${author} at ${date}`}</small>
+                                    <a className="link-primary" href={slug}>
+                                        <span className="learn-more">Learn More</span>
+                                    </a>
                                 </div>
                             </div>
                         ))}
