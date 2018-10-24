@@ -1,4 +1,4 @@
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import React, { Component } from 'react';
 import Footer from '../components/Footer';
