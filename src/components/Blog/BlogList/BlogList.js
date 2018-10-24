@@ -1,7 +1,19 @@
 import { Link, StaticQuery, graphql } from 'gatsby';
 import React, { Component } from 'react';
+import CodeTabs from '../../CodeTabs';
+import CodeClipboard from '../../CodeClipboard';
 
 class BlogList extends Component {
+    componentDidMount() {
+        this._codeTabs = new CodeTabs();
+        this._codeClipboard = new CodeClipboard();
+    }
+
+    componentWillUnmount() {
+        this._codeTabs = null;
+        this._codeClipboard.dispose();
+    }
+
     render() {
         return (
             <div>
@@ -34,7 +46,7 @@ export default (props) => (
             }
         `}
         render={({ allMdx: {edges} }) => {
-            const fieldsFn = ({ node: { fields } }) =>fields;
+            const fieldsFn = ({ node: { fields } }) => fields;
 
             const posts = edges.map(fieldsFn);
 
