@@ -56,6 +56,30 @@ module.exports = {
 			},
 		},
 		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-zopfli'
+		'gatsby-plugin-zopfli',
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				name: 'Gatsby Boilerplate',
+				short_name: 'Gatsby Boilerplate',
+				start_url: '/',
+				background_color: '#FFFFFF',
+				theme_color: '#0B5FFF',
+				display: 'minimal-ui',
+				icons: [
+					{
+						"src": "/images/favicon/android-chrome-192x192.png",
+						"sizes": "192x192",
+						"type": "image/png"
+					},
+					{
+						"src": "/images/favicon/android-chrome-512x512.png",
+						"sizes": "512x512",
+						"type": "image/png"
+					}
+				]
+			},
+		},
+		'gatsby-plugin-offline'
 	],
 };
