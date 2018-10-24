@@ -14,7 +14,7 @@ export default class BlogArticle extends Component {
                     {this.props.author ? `by ${this.props.author}` : ''} | {this.props.date ? `${this.props.date}` : ''}
                 </small>
 
-                <h1 className="">{this.props.title}</h1>
+                <h1>{this.props.title}</h1>
 
                 <div className="blog-article">
                     <MDXRenderer

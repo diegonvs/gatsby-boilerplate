@@ -61,6 +61,9 @@ class LayoutNav extends Component {
                             <Link className="nav-link ml-3" to="/blog/">Blog</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link ml-3" to="/onboarding/">Onboarding</Link>
+                        </li>
+                        <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href={githubRepo} target="_blank">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
                             </a>

@@ -690,6 +690,12 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@gfx/zopfli@^1.0.8":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.9.tgz#a230bd430cab37f3056d796d5fc4a0a0a666ced6"
+  dependencies:
+    base64-js "^1.3.0"
+
 "@mdx-js/mdx@^0.15.4":
   version "0.15.5"
   resolved "https://registry.yarnpkg.com/@mdx-js/mdx/-/mdx-0.15.5.tgz#a3821a1e0e460ee993437ef3f922482fb67c31d0"
@@ -2130,7 +2136,7 @@ base64-arraybuffer@0.1.5:
   version "0.1.5"
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.5.tgz#73926771923b5a19747ad666aa5cd4bf9c6e9ce8"
 
-base64-js@^1.0.2:
+base64-js@^1.0.2, base64-js@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.3.0.tgz#cab1e6118f051095e58b5281aea8c1cd22bfc0e3"
 
@@ -5252,6 +5258,12 @@ gatsby-plugin-sass@^2.0.1:
   dependencies:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
+
+gatsby-plugin-zopfli@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-1.0.2.tgz#3a0736d19d3de4164e93cbf56448c501e7480726"
+  dependencies:
+    "@gfx/zopfli" "^1.0.8"
 
 gatsby-react-router-scroll@^2.0.0:
   version "2.0.0"

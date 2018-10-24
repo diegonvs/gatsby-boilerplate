@@ -6,10 +6,12 @@ const path = require('path');
 const createPages = (actions, edges) => {
 	const {createPage, createRedirect} = actions;
 
-	edges.forEach(({node}) => {
+	edges.forEach(({node}, index) => {
 		const {slug, redirect, layout} = node.fields;
 
 		const {mainPage} = node.frontmatter;
+
+		const templateKey = slug.split('/')[0];
 
 		if (redirect || mainPage) {
 			const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
@@ -25,7 +27,8 @@ const createPages = (actions, edges) => {
 			});
 		}
 
-		let templateKey = slug.split('/')[0];
+		let previous = index === 0 ? false : edges[index - 1].node;
+		let next = index === edges.length - 1 ? false : edges[index + 1].node;
 
 		if (layout !== 'redirect') {
 			createPage({
@@ -37,6 +40,8 @@ const createPages = (actions, edges) => {
 				),
 				context: {
 					slug,
+					previous,
+					next,
 				},
 			});
 		}
@@ -52,7 +57,7 @@ module.exports = async ({actions, graphql}) => {
 
 	return graphql(`
 		query {
-			allMdx {
+			allMdx(sort: {order:ASC, fields: frontmatter___stepNumber}) {
 				edges {
 					node {
 						fields {
@@ -61,6 +66,7 @@ module.exports = async ({actions, graphql}) => {
 							slug
 							title
 							weight
+							stepNumber
 						}
 						frontmatter {
 							mainPage
