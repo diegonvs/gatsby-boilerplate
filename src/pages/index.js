@@ -50,6 +50,9 @@ class Index extends Component {
                                         <Link to="/blog/" className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4">
                                             Blog
                                         </Link>
+                                        <Link to="/onboarding/" className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4">
+                                            Onboarding
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
