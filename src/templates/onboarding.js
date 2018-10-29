@@ -77,19 +77,22 @@ export default class Onboarding extends Component {
                                             {body}
                                         </MDXRenderer>
 
-                                        <div className="btn-group">
-                                            {previous.fields &&
-                                                <div className="btn-group-item">
-                                                    <Link to={previous.fields.slug} className="btn btn-secondary">Previous</Link>
+                                        <div className="social">
+                                            <div className="social-buttons">
+                                                <div className="btn-group">
+                                                    {previous.fields &&
+                                                        <div className="btn-group-item">
+                                                            <Link to={previous.fields.slug} className="btn btn-secondary">Previous</Link>
+                                                        </div>
+                                                    }
+                                                    {next.fields && next.fields.slug.startsWith('onboarding') &&
+                                                        <div className="btn-group-item">
+                                                            <Link to={next.fields.slug} className="btn btn-primary">Next Step</Link>
+                                                        </div>
+                                                    }
                                                 </div>
-                                            }
-                                            {next.fields && next.fields.slug.startsWith('onboarding') &&
-                                                <div className="btn-group-item">
-                                                    <Link to={next.fields.slug} className="btn btn-primary">Next Step</Link>
-                                                </div>
-                                            }
+                                            </div>
                                         </div>
-
                                     </article>
                                     </>
                                 }
