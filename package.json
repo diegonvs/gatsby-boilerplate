@@ -48,6 +48,7 @@
     "react-helmet": "^5.2.0",
     "react-live": "^1.10.1",
     "rehype-react": "^3.0.2",
+    "wedeploy": "^4.5.0",
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
