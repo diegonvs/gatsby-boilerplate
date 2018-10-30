@@ -11,8 +11,8 @@ class Search extends Component {
 	componentDidMount() {
 		if (window.docsearch) {
 			window.docsearch({
-				apiKey: algoliaAPIKey,
-				indexName: algoliaIndexName,
+				apiKey: process.env.ALGOLIA_API_KEY,
+				indexName: process.env.ALGOLIA_INDEX_NAME,
 				inputSelector: '#algolia-doc-search',
 			});
 		} else {
@@ -45,7 +45,7 @@ class Search extends Component {
 				</div>
 			</div>
 		);
-	}	
+	}
 }
 
 export default Search;

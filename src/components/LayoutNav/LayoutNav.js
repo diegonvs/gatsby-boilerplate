@@ -44,8 +44,6 @@ class LayoutNav extends Component {
 
         const title = 'Gatsby Boilerplate';
 
-        const githubRepo = 'https://github.com/diegonvs/gatsby-boilerplate';
-
         return (
             <nav ref="navElement" className={styles}>
                 <div className="container-fluid container-fluid-max-lg">
@@ -64,7 +62,7 @@ class LayoutNav extends Component {
                             <Link className="nav-link ml-3" to="/onboarding/">Onboarding</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="mx-3 mr-lg-0" href={githubRepo} target="_blank">
+                            <a className="mx-3 mr-lg-0" href={process.env.GITHUB_REPO} target="_blank">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
                             </a>
                         </li>

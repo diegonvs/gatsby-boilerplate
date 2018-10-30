@@ -23,8 +23,6 @@ class Index extends Component {
 
         const title = "Gatsby Boilerplate";
 
-        const githubRepo = "https://github.com/liferay/clay";
-
         return (
             <div className="home">
                 <Helmet>
@@ -69,7 +67,7 @@ class Index extends Component {
                                 </div>
                                 <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
                                     <div className="media-body mt-4 text-center text-lg-left">
-                                        <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href={githubRepo} className="font-weight-bold" target="_blank">GitHub repo.</a></p>
+                                        <p className="h1 font-weight-bold">Want to contribute? Found an issue? Head on over to the <a href={PROCESS.ENV.GITHUB_REPO} className="font-weight-bold" target="_blank">GitHub repo.</a></p>
                                     </div>
                                 </div>
                             </div>
