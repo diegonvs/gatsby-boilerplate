@@ -2,6 +2,7 @@
 description: Part Four
 title: Four
 stepNumber: 4
+needsAuth: true
 ---
 
 Fourth Step

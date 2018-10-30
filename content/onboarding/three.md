@@ -2,6 +2,7 @@
 description: Part Three
 title: Three
 stepNumber: 3
+needsAuth: true
 ---
 
 Third Step

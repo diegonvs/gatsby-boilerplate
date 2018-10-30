@@ -2,6 +2,7 @@
 description: Part One
 title: One
 stepNumber: 1
+needsAuth: true
 ---
 
 First Step

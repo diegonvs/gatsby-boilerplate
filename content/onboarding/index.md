@@ -1,6 +1,7 @@
 ---
 mainPage: true
 title: Getting Started
+needsAuth: true
 ---
 
 Welcome to Onboarding guide!

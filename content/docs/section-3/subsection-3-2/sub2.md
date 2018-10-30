@@ -1,5 +1,6 @@
 ---
 title: "Markdown?"
+needsAuth: true
 ---
 
 # hello, This is Markdown Live Preview

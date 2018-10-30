@@ -2,6 +2,7 @@
 description: Part Two
 title: Two
 stepNumber: 2
+needsAuth: true
 ---
 
 Second Step
