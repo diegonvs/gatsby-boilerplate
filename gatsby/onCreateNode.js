@@ -1,4 +1,4 @@
-module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
+module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 	const {createNodeField} = actions;
 
 	if (node.internal.type === 'Mdx') {
@@ -13,7 +13,8 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			author,
 			mainPage,
 			banner,
-			stepNumber
+			stepNumber,
+			needsAuth
 		} = node.frontmatter;
 
 		const {relativePath} = getNode(node.parent);
@@ -94,6 +95,12 @@ module.exports = exports.onCreateNode = ({node, actions, getNode}) => {
 			node,
 			name: 'stepNumber',
 			value: stepNumber || 0,
+		});
+
+		createNodeField({
+			node,
+			name: 'needsAuth',
+			value: needsAuth || 0,
 		})
 	}
 };
