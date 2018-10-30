@@ -70,6 +70,7 @@ module.exports = async ({actions, graphql}) => {
 						}
 						frontmatter {
 							mainPage
+							needsAuth
 						}
 						code {
 							scope
