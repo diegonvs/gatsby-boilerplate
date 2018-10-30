@@ -56,7 +56,6 @@ module.exports = {
 			},
 		},
 		'gatsby-plugin-react-helmet',
-		'gatsby-plugin-zopfli',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -80,6 +79,12 @@ module.exports = {
 				]
 			},
 		},
-		'gatsby-plugin-offline'
+		{
+			resolve: 'gatsby-plugin-offline',
+			options: {
+				globPatterns: ['**/*.{js,jpg,png,gif,html,css}'],
+			},
+		},
+		'gatsby-plugin-zopfli'
 	],
 };
