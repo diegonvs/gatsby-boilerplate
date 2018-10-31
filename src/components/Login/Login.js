@@ -7,15 +7,19 @@ class Login extends Component {
         password: ''
     }
 
-    handleUpdate = event => {
+    handleUpdate = (event) => {
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
 
-    handleSubmit = event => {
+    handleSubmit = (event) => {
         event.preventDefault();
-        handleLogin(this.state);
+        handleLogin(this.state).then(() => {
+            this.props.changeLoginState(true);
+        }).catch(() => {
+            this.props.changeLoginState(false);
+        });
     }
 
     render() {

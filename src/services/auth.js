@@ -9,50 +9,33 @@ export const getUser = () =>
 
 const setUser = user => window.localStorage.setItem("gatsbyUser", JSON.stringify(user));
 
-const auth = WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL);
+const auth = WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL).auth(process.env.WEDEPLOY_MASTER_TOKEN);
 
 export const handleLogin = ({ email, password }) => {
-    console.log(email, password);
-
-    console.log(auth.currentUser);
-
-    if (auth.currentUser) {
-        return setUser({
-            email: auth.currentUser.email,
-            password: auth.currentUser.password,
-        });
-    }
-
-    if (!email.endsWith('@liferay.com')) {
-        return false;
-    }
-
-    auth.signInWithEmailAndPassword(email, password)
-        .then((user) => {
-            console.log(user);
-            return setUser({
-                email: auth.currentUser.email,
-                password: auth.currentUser.password,
+    if (!auth.currentUser) {
+        return new Promise((resolve, reject) => {
+            auth.signInWithEmailAndPassword(email, password)
+            .then(({ data_: { createdAt, email, id, token } }) => {
+                setUser({
+                    createdAt: createdAt,
+                    email: email,
+                    id: id,
+                    token: token,
+                });
+                resolve();
+            })
+            .catch((e) => {
+                reject(alert(e.error_description));
             });
         })
-        .catch(() => {
-            alert('Sign-in failed.');
-        });
-
-        return false;
+    }
 }
 
 export const isLoggedIn = () => {
-    let currentUser = auth.currentUser;
-
-    if (currentUser) {
-        return true;
-    }
-
-    return false;
+    return !!auth.currentUser;
 }
 
-export const logout = callback => {
+export const logout = () => {
     setUser({});
     auth
         .signOut()
@@ -62,5 +45,4 @@ export const logout = callback => {
         .catch(function (err) {
             alert(err);
         });
-    callback();
 }

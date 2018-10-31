@@ -2,6 +2,7 @@ import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
 import { Link } from "gatsby";
 import classnames from 'classnames';
+import {isLoggedIn, logout} from '../../services/auth';
 
 class LayoutNav extends Component {
     constructor() {
@@ -25,6 +26,10 @@ class LayoutNav extends Component {
         } else {
             this.refs.navElement.classList.remove('scroll');
         }
+    }
+
+    _handleLogout() {
+        logout();
     }
 
     componentDidMount() {
@@ -61,6 +66,11 @@ class LayoutNav extends Component {
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/onboarding/">Onboarding</Link>
                         </li>
+                        {isLoggedIn() ? (
+                            <li className="nav-item">
+                                <Link className="nav-link ml-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
+                            </li>
+                        ) : ''}
                         <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href={process.env.GITHUB_REPO} target="_blank">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
