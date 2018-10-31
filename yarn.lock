@@ -3041,7 +3041,7 @@ combined-stream@1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-combined-stream@~1.0.5, combined-stream@~1.0.6:
+combined-stream@^1.0.6, combined-stream@~1.0.5, combined-stream@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.7.tgz#2d1d24317afb8abe95d6d2c0b07b57813539d828"
   dependencies:
@@ -5070,6 +5070,14 @@ forever-agent@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
 
+form-data@^2.3.2:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.3.tgz#dcce52c05f644f298c6a7ab936bd724ceffbf3a6"
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.6"
+    mime-types "^2.1.12"
+
 form-data@~2.3.1, form-data@~2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/form-data/-/form-data-2.3.2.tgz#4970498be604c20c005d4f5c23aecd21d6b49099"
@@ -5251,6 +5259,12 @@ gatsby-mdx@^0.1.4:
     unist-util-map "^1.0.4"
     unist-util-remove "^1.0.1"
     unist-util-visit "^1.4.0"
+
+gatsby-plugin-create-client-paths@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-create-client-paths/-/gatsby-plugin-create-client-paths-2.0.2.tgz#756bc01fd7dc22ac02029a7154126445636b6097"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-google-analytics@^2.0.6:
   version "2.0.6"
@@ -7506,6 +7520,14 @@ merge2@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.2.2.tgz#03212e3da8d86c4d8523cebd6318193414f94e34"
 
+metal-ajax@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/metal-ajax/-/metal-ajax-3.1.1.tgz#6db7d2de349d6d46c5d0fda0ab786d8015db378a"
+  dependencies:
+    metal "^2.0.0"
+    metal-promise "^3.0.4"
+    metal-uri "^3.1.1"
+
 metal-clipboard@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/metal-clipboard/-/metal-clipboard-2.0.1.tgz#3a4c5e0a2d7d30cc2e5ef46e6478068e2c3428fb"
@@ -7571,6 +7593,12 @@ metal-position@^2.1.0:
     metal "^2.16.6"
     metal-dom "^2.16.6"
 
+metal-promise@^3.0.4:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/metal-promise/-/metal-promise-3.0.5.tgz#03d8fb40579e5b97a4e44356e00042f2d34844de"
+  dependencies:
+    metal "^2.16.6"
+
 metal-soy-bundle@^2.16.6:
   version "2.16.6"
   resolved "https://registry.yarnpkg.com/metal-soy-bundle/-/metal-soy-bundle-2.16.6.tgz#bc14449ed4c5b0477832abde952d4ca0cb94f00b"
@@ -7602,6 +7630,18 @@ metal-state@^2.16.0, metal-state@^2.16.6:
     metal "^2.16.6"
     metal-events "^2.16.6"
 
+metal-storage@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/metal-storage/-/metal-storage-1.1.0.tgz#b1ba2ccc30084c0b125e95913555f4a2d8a4c30e"
+  dependencies:
+    metal "^2.0.0"
+
+metal-structs@^1.0.0, metal-structs@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/metal-structs/-/metal-structs-1.0.2.tgz#3b4f585f169e61cabb2ccd7ee5f0d97b60b1fc8a"
+  dependencies:
+    metal "^2.16.6"
+
 metal-tabs@^2.3.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/metal-tabs/-/metal-tabs-2.3.1.tgz#3dda4197356e9a63636bc903cb5dc7b04c520c44"
@@ -7610,6 +7650,16 @@ metal-tabs@^2.3.1:
     metal-keyboard-focus "^2.0.0"
     metal-soy "^2.0.0"
 
+metal-uri@^3.1.1:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/metal-uri/-/metal-uri-3.1.2.tgz#a24b6adf129d28ca775ac6c8fd4d6750c0d043f6"
+  dependencies:
+    metal "^2.16.6"
+    metal-structs "^1.0.2"
+    path-browserify "0.0.0"
+    resolve-pathname "^2.2.0"
+    url-parse "^1.1.9"
+
 metal-web-component@^2.16.0:
   version "2.16.6"
   resolved "https://registry.yarnpkg.com/metal-web-component/-/metal-web-component-2.16.6.tgz#21060bb2315bf277627b4c073203c4ba41ca7bf4"
@@ -7617,7 +7667,7 @@ metal-web-component@^2.16.0:
     metal "^2.16.6"
     metal-state "2.7.0"
 
-metal@^2.0.0, metal@^2.16.0, metal@^2.16.2, metal@^2.16.6, metal@^2.6.4:
+metal@^2.0.0, metal@^2.16.0, metal@^2.16.2, metal@^2.16.5, metal@^2.16.6, metal@^2.6.4:
   version "2.16.6"
   resolved "https://registry.yarnpkg.com/metal/-/metal-2.16.6.tgz#c71ca71d2a56f6f49621dd1a1f9dfc3ef2ff40b7"
 
@@ -9879,7 +9929,7 @@ request@2.87.0:
     tunnel-agent "^0.6.0"
     uuid "^3.1.0"
 
-"request@>= 2.44.0 < 3.0.0", request@^2.83.0, request@^2.85.0, request@^2.87.0:
+"request@>= 2.44.0 < 3.0.0", request@^2.83.0, request@^2.85.0, request@^2.86.0, request@^2.87.0:
   version "2.88.0"
   resolved "https://registry.yarnpkg.com/request/-/request-2.88.0.tgz#9c2fca4f7d35b592efe57c7f0a55e81052124fef"
   dependencies:
@@ -9957,6 +10007,10 @@ resolve-options@^1.1.0:
   resolved "https://registry.yarnpkg.com/resolve-options/-/resolve-options-1.1.0.tgz#32bb9e39c06d67338dc9378c0d6d6074566ad131"
   dependencies:
     value-or-function "^3.0.0"
+
+resolve-pathname@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/resolve-pathname/-/resolve-pathname-2.2.0.tgz#7e9ae21ed815fd63ab189adeee64dc831eefa879"
 
 resolve-url@^0.2.1:
   version "0.2.1"
@@ -10419,7 +10473,7 @@ socket.io-adapter@~1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/socket.io-adapter/-/socket.io-adapter-1.1.1.tgz#2a805e8a14d6372124dd9159ad4502f8cb07f06b"
 
-socket.io-client@2.1.1:
+socket.io-client@2.1.1, socket.io-client@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/socket.io-client/-/socket.io-client-2.1.1.tgz#dcb38103436ab4578ddb026638ae2f21b623671f"
   dependencies:
@@ -11500,7 +11554,7 @@ url-parse-lax@^1.0.0:
   dependencies:
     prepend-http "^1.0.1"
 
-url-parse@^1.1.8, url-parse@^1.4.3:
+url-parse@^1.1.8, url-parse@^1.1.9, url-parse@^1.4.3:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.3.tgz#bfaee455c889023219d757e045fa6a684ec36c15"
   dependencies:
@@ -11833,6 +11887,20 @@ websocket-driver@>=0.5.1:
 websocket-extensions@>=0.1.1:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
+
+wedeploy@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/wedeploy/-/wedeploy-4.5.0.tgz#011b5e557c493e149f9b20d072abfc423efc444f"
+  dependencies:
+    form-data "^2.3.2"
+    metal "^2.16.5"
+    metal-ajax "^3.1.1"
+    metal-promise "^3.0.4"
+    metal-storage "^1.1.0"
+    metal-structs "^1.0.0"
+    metal-uri "^3.1.1"
+    request "^2.86.0"
+    socket.io-client "^2.1.0"
 
 whatwg-fetch@2.0.4:
   version "2.0.4"
