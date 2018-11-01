@@ -1,5 +1,5 @@
-import {Link, graphql} from 'gatsby';
-import React, {Component} from 'react';
+import { Link, graphql } from 'gatsby';
+import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import MultiStepNav from '../components/Onboarding/MultiStepNav';
