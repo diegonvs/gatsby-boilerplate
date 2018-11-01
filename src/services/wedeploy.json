@@ -3,6 +3,6 @@
     "image": "wedeploy/auth:2.8.0",
     "env": {
         "WEDEPLOY_AUTH_SECURE_FIELDS": "providers, email, password, resetKey, supportedScopes",
-        "WEDEPLOY_AUTH_PASSWORD": true
+        "WEDEPLOY_AUTH_PASSWORD": "true"
     }
 }
