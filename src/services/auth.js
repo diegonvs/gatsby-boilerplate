@@ -12,7 +12,7 @@ const setUser = user => window.localStorage.setItem("gatsbyUser", JSON.stringify
 const auth = WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL).auth(process.env.WEDEPLOY_MASTER_TOKEN);
 
 export const handleLogin = ({ email, password }) => {
-    if (!auth.currentUser) {
+    if (!isLoggedIn()) {
         return new Promise((resolve, reject) => {
             auth.signInWithEmailAndPassword(email, password)
             .then(({ data_: { createdAt, email, id, token } }) => {
@@ -28,6 +28,24 @@ export const handleLogin = ({ email, password }) => {
                 reject(alert(e.error_description));
             });
         })
+    }
+}
+
+export const handleSignUp = ({email, password}) => {
+    if (!isLoggedIn()) {
+        return new Promise((resolve, reject) => {
+            auth.createUser({
+                email: email,
+                password: password
+            })
+            .then((user) => {
+                console.log(user);
+                resolve();
+            })
+            .catch((err) => {
+                reject(alert(err));
+            });
+        });
     }
 }
 

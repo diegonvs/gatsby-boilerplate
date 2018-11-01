@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { handleLogin, isLoggedIn} from '../../services/auth'
+import { handleLogin, isLoggedIn, handleSignUp} from '../../services/auth'
 
 class Login extends Component {
     state = {
@@ -13,8 +13,19 @@ class Login extends Component {
         })
     }
 
-    handleSubmit = (event) => {
+    _handleSignUp = (event) => {
         event.preventDefault();
+
+        handleSignUp(this.state).then(() => {
+            this.props.changeLoginState(true);
+        }).catch(() => {
+            this.props.changeLoginState(false);
+        });
+    }
+
+    _handleSubmit = (event) => {
+        event.preventDefault();
+
         handleLogin(this.state).then(() => {
             this.props.changeLoginState(true);
         }).catch(() => {
@@ -34,18 +45,27 @@ class Login extends Component {
                                         <h2 className="sheet-title">Login</h2>
                                     </div>
                                     <form method="post" onSubmit={event => {
-                                        this.handleSubmit(event);
+                                        this._handleSubmit(event);
                                     }}>
                                         <div className="form-group">
                                             <label htmlFor="basicInputTypeEmail">Email</label>
-                                            <input className="form-control" type="email" name="email" onChange={this.handleUpdate} id="basicInputTypeEmail" />
+                                            <input className="form-control" autoComplete="email" type="email" name="email" onChange={this.handleUpdate} id="basicInputTypeEmail" />
                                         </div>
                                         <div className="form-group">
                                             <label htmlFor="basicInputTypePassword">Password</label>
-                                            <input className="form-control" id="basicInputTypePassword" onChange={this.handleUpdate} placeholder="Enter password" name="password" type="password" />
+                                            <input className="form-control" autoComplete="current-password" id="basicInputTypePassword" onChange={this.handleUpdate} placeholder="Enter password" name="password" type="password" />
                                         </div>
                                         <div className="form-group">
-                                            <button className="btn btn-primary" type="submit">Submit</button>
+                                            <div className="btn-group">
+                                                <div className="btn-group-item">
+                                                    <button className="btn btn-primary" type="submit">Submit</button>
+                                                </div>
+                                                <div className="btn-group-item">
+                                                    <a class="btn btn-secondary" onClick={(event) => {
+                                                        this._handleSignUp(event);
+                                                    }} href="#">Sign Up</a>
+                                                </div>
+                                            </div>
                                         </div>
                                     </form>
                                 </div>
