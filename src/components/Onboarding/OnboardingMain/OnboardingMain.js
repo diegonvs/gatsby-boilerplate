@@ -18,9 +18,13 @@ export default class OnboardingMain extends Component {
                 >
                     {this.props.codeBody}
                 </MDXRenderer>
-                <div className="btn-group">
-                    <div className="btn-group-item">
-                        <Link to="onboarding/one.html" className="btn btn-primary">Get Started</Link>
+                <div className="social">
+                    <div className="social-buttons">
+                        <div className="btn-group">
+                            <div className="btn-group-item">
+                                <Link to="onboarding/one.html" className="btn btn-primary">Get Started</Link>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
