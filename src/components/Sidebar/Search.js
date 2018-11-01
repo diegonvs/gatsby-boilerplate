@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-const algoliaAPIKey = 'algoliaAPIKey';
-const algoliaIndexName = 'indexName';
-
 class Search extends Component {
 	state = {
 		enabled: true

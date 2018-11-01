@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LoggedContext from './auth-context';
 import { isLoggedIn } from '../../services/auth';
 import Login from '../Login';
 
