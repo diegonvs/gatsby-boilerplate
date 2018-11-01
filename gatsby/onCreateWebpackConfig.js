@@ -7,7 +7,7 @@ module.exports = ({actions, stage}) => {
 		module = {
 			rules: [
 				{
-					test: /wowjs|clay-charts|clay-alert|clay-badge|clay-button|clay-dropdown|clay-tooltip|metal-clipboard/,
+					test: /wowjs|clay-charts|clay-alert|clay-badge|clay-button|clay-dropdown|clay-tooltip|metal-clipboard|wedeploy/,
 					loader: 'null-loader',
 				},
 			],
