@@ -1,4 +1,5 @@
-import WeDeploy from 'wedeploy';
+import WeDeploy from 'wedeploy/build/browser/api-min';
+import { Nothing } from 'nothing-mock';
 
 export const isBrowser = () => typeof window !== "undefined"
 
@@ -9,7 +10,7 @@ export const getUser = () =>
 
 const setUser = user => window.localStorage.setItem("gatsbyUser", JSON.stringify(user));
 
-const auth = WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL).auth(process.env.WEDEPLOY_MASTER_TOKEN);
+const auth = isBrowser() ? WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL).auth(process.env.WEDEPLOY_MASTER_TOKEN) : Nothing;
 
 export const handleLogin = ({ email, password }) => {
     if (!isLoggedIn()) {
