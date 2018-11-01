@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { handleLogin, isLoggedIn, handleSignUp} from '../../services/auth'
+import { handleLogin, handleSignUp} from '../../services/auth'
 
 class Login extends Component {
     state = {
