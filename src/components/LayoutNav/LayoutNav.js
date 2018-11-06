@@ -47,14 +47,12 @@ class LayoutNav extends Component {
             'fixed-top': fixed,
         });
 
-        const title = 'Gatsby Boilerplate';
-
         return (
             <nav ref="navElement" className={styles}>
                 <div className="container-fluid container-fluid-max-lg">
                     <Link to="/" className="navbar-brand">
                         <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="" />
-                        <span className="title align-middle">{title}</span>
+                        <span className="title align-middle">{process.env.PROJECT_NAME}</span>
                     </Link>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">

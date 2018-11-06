@@ -21,16 +21,14 @@ class Index extends Component {
     render() {
         const description = "Make powerful static sites 💖";
 
-        const title = "Gatsby Boilerplate";
-
         return (
             <div className="home">
                 <Helmet>
-                    <title>{title}</title>
+                    <title>{process.env.PROJECT_NAME}</title>
                     <meta name="description" content={description} />
                     <meta name="og:description" content={description} />
                     <meta name="twitter:description" content={description} />
-                    <meta name="og:title" content="{title}" />
+                    <meta name="og:title" content={process.env.PROJECT_NAME} />
                 </Helmet>
                 <main className="content">
                     <header className="header">
@@ -40,7 +38,7 @@ class Index extends Component {
                             <div className="row">
                                 <div className="intro text-center col">
                                     <div className="container-fluid container-fluid-max-lg">
-                                        <h1 className="h1">{title}</h1>
+                                        <h1 className="h1">{process.env.PROJECT_NAME}</h1>
                                         <h2 className="h3">{description}</h2>
                                         <Link to="/docs/" className="btn btn-lg btn-outline-light font-weight-bold mx-3 mb-4">
                                             Docs

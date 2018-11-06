@@ -86,7 +86,7 @@ export default (props) => (
 					<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
 						<Link to="/" className="navbar-brand d-flex">
 							<img className="logo mr-2" src={logoPath} alt="" />
-							<span className="title h1 font-weight-bold mb-0 p-1">Gatsby Boilerplate</span>
+							<span className="title h1 font-weight-bold mb-0 p-1">{process.env.PROJECT_NAME}</span>
 						</Link>
 
 						<button onClick={onClick} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,7 +106,7 @@ export default (props) => (
 								<div className="navbar navbar-expand-lg navbar-header">
 									<Link className="navbar-brand" to="/">
 										<img className="logo mr-2" src={logoPath} alt="Clay" />
-										<span className="title">Gatsby Boilerplate</span>
+										<span className="title">{process.env.PROJECT_NAME}</span>
 										{/* <small>by Liferay</small> */}
 									</Link>
 								</div>
