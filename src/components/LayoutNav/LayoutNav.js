@@ -66,6 +66,9 @@ class LayoutNav extends Component {
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/onboarding/">Onboarding</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link className="nav-link ml-3" to="/updates/">Updates</Link>
+                        </li>
                         {isLoggedIn() ? (
                             <li className="nav-item">
                                 <Link className="nav-link ml-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
