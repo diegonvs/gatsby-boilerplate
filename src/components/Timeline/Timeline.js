@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 
 class Timeline extends Component {
-    _handlePanelClick() {
-        console.log('click');
-        // change default classes to expand the panel :)
-    }
-
     _compareVersions(a, b) {
         if (a.version < b.version)
             return 1;
@@ -22,10 +17,10 @@ class Timeline extends Component {
         return (
             <>
                 <ul className="timeline timeline-center">
-                    {updates.map(({ version, major, features }, index) => (
-                        <li key={index} className="timeline-item">
-                            {features.map((featProp, index) => (
-                                <div key={index} className="panel panel-secondary">
+                    {updates.map(({ version, major, features }, updatesIndex) => (
+                        <li key={updatesIndex} className="timeline-item">
+                            {features.map((featProp, featuresIndex) => (
+                                <div key={featuresIndex} className="panel panel-secondary">
                                     <a aria-expanded="true" className="panel-header panel-header-link" data-toggle="collapse" href={featProp.url} id="headingTimelineCenter0" role="tab">
                                         <span className="panel-title">{featProp.title}</span>
                                         <div className="timeline-increment">
@@ -34,7 +29,7 @@ class Timeline extends Component {
                                             </svg>
                                         </div>
                                         <div className="timeline-item-label">
-                                            {major ? (<h2> {version} </h2>) : <p>{version}</p>}
+                                            {featuresIndex > 0 ? '' :  major?(<h2> { version } </h2>) : <p>{version}</p>}
                                         </div>
                                     </a>
                                     <div aria-labelledby="headingTimelineCenter0" className="panel-collapse collapse show" role="tabpanel">
@@ -53,3 +48,5 @@ class Timeline extends Component {
 }
 
 export default Timeline;
+//     </div>
+// </div> */}
