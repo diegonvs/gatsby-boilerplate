@@ -82,7 +82,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-offline',
 			options: {
-				globPatterns: ['**/*.{js,jpg,png,gif,html,css}'],
+				globPatterns: ['**/*.{js,jpg,png,gif,html,css,svg}'],
 			},
 		},
 		'gatsby-plugin-zopfli'
