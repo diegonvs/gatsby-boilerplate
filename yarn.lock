@@ -9708,13 +9708,6 @@ regjsparser@^0.3.0:
   dependencies:
     jsesc "~0.5.0"
 
-rehype-react@^3.0.2:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/rehype-react/-/rehype-react-3.0.3.tgz#868af1b6b454927af8052501910c3cdc531a2b37"
-  dependencies:
-    has "^1.0.1"
-    hast-to-hyperscript "^5.0.0"
-
 relay-compiler@1.5.0:
   version "1.5.0"
   resolved "http://registry.npmjs.org/relay-compiler/-/relay-compiler-1.5.0.tgz#564f1582c549fa6b4af9d9f09dadb5e239c11055"
