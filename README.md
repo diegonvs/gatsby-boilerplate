@@ -14,4 +14,6 @@ If you want to check the documentation 📚 click on this [link](https://github.
 3. Run `npm run build` or `yarn build` for production mode
 3.1 If you want serve your production build just run `npm run serve` or `yarn serve`
 
+## License
 
+[BSD License](https://github.com/metal/metal.js/blob/master/LICENSE.md) © Liferay, Inc.
