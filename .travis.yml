@@ -15,5 +15,5 @@ env:
 
 script:
   - rm -rf public/ .cache/ && yarn build
-  - netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p
-  - yarn lh -- --pwa=90 --seo=90 https://clever-yonath-8eed83.netlify.com
+  - netlify deploy -s $NETLIFY_SITE_ID -a $NETLIFY_ACCESS_TOKEN -p
+  - npm run lh -- --perf=90 --pwa=90 https://clever-yonath-8eed83.netlify.com
