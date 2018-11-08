@@ -4,6 +4,7 @@ Gatsby Boilerplate is a [Gatsby](https://github.com/gatsbyjs/gatsby) starter wit
 
 Feel free to contribute with issues and PRs!
 
+# Documentation
 If you want to check the documentation 📚 click on this [link](https://github.com/diegonvs/gatsby-boilerplate/wiki).
 
 # Setup
