@@ -2,6 +2,7 @@ before_install:
   - nvm install 8
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.10.1
   - export PATH=$HOME/.yarn/bin:$PATH
+  - yarn global add netlify-cli
 
 cache:
   yarn: true
@@ -11,3 +12,5 @@ install:
 
 script:
   - rm -rf public/ .cache/ && yarn build
+  - netlify deploy -a
+  - yarn lh -- --pwa=90 --seo=90 https://clever-yonath-8eed83.netlify.com
