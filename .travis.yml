@@ -10,7 +10,10 @@ cache:
 install:
   - yarn
 
+env:
+  - CI=true
+
 script:
   - rm -rf public/ .cache/ && yarn build
-  - netlify deploy -a
+  - netlify deploy -s $NETLIFY_SITE_ID -t $NETLIFY_ACCESS_TOKEN -p
   - yarn lh -- --pwa=90 --seo=90 https://clever-yonath-8eed83.netlify.com
