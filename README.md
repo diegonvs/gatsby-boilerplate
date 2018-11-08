@@ -1,5 +1,7 @@
 # Gatsby Boilerplate 🚀
 
+[![Build Status](https://img.shields.io/travis/diegonvs/gatsby-boilerplate/master.svg?style=flat)](https://travis-ci.org/diegonvs/gatsby-boilerplate)
+
 Gatsby Boilerplate is a [Gatsby](https://github.com/gatsbyjs/gatsby) starter with a better development experience and the same content creation experience than [Electric.js](https://github.com/electricjs/electric).
 
 Feel free to contribute with issues and PRs!
