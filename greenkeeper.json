@@ -1,0 +1,14 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "package.json",
+        "plugins/gatsby-plugin-meta-redirect/package.json",
+        "plugins/gatsby-remark-api-table/package.json",
+        "plugins/gatsby-remark-foreach-icons/package.json",
+        "plugins/gatsby-remark-use-clipboard/package.json",
+        "plugins/gatsby-transformer-try-examples/package.json"
+      ]
+    }
+  }
+}
