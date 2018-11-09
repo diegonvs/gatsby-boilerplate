@@ -1,3 +1,7 @@
+// Workaround until a new Clay version wasn't released.
+// https://github.com/liferay/clay/commit/0bf32aabff42fa9c03ad24a8f49db31fb3528952
+$input-border-width: 0.0625rem;
+
 @import "atlas";
 @import "charts";
 
