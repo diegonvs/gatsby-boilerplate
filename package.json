@@ -10,8 +10,8 @@
     "lh": "lighthouse-ci"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^0.15.4",
-    "@mdx-js/tag": "^0.15.0",
+    "@mdx-js/mdx": "^0.16.0",
+    "@mdx-js/tag": "^0.16.0",
     "babel-preset-metal-jsx": "^0.1.1",
     "browser-monads": "^1.0.0",
     "classnames": "^2.2.6",
@@ -19,13 +19,13 @@
     "clay-badge": "^2.2.0",
     "clay-button": "^2.2.0",
     "clay-charts": "^2.2.0",
-    "clay-css": "2.3.0",
+    "clay-css": "2.3.4",
     "clay-dropdown": "^2.2.0",
     "clay-tooltip": "^2.2.0",
     "countries-list": "^2.3.2",
     "documentation": "^8.1.2",
     "gatsby": "^2.0.36",
-    "gatsby-mdx": "^0.1.4",
+    "gatsby-mdx": "^0.2.0",
     "gatsby-plugin-google-analytics": "^2.0.6",
     "gatsby-plugin-manifest": "^2.0.6",
     "gatsby-plugin-offline": "^2.0.9",
@@ -53,7 +53,7 @@
     "wowjs": "^1.1.3"
   },
   "devDependencies": {
-    "gh-pages": "^1.2.0",
+    "gh-pages": "^2.0.1",
     "globby": "^8.0.1"
   }
 }
