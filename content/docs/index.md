@@ -1,7 +1,6 @@
 ---
 layout: "redirect"
-redirect: "/docs/news/index.html"
-title: "Docs"
+redirect: "/docs/migration-from-electric/first-considerations/what-is.html"
+title: "Documentation"
 mainPage: false
-needsAuth: true
 ---
