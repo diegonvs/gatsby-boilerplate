@@ -1,10 +1,9 @@
 ---
 description: You have finished the guide!
 title: Success
-stepNumber: 5
-needsAuth: true
+stepNumber: 4
 ---
 
-# You have finished the guide!
+For more details access the documentation [here](/docs/).
 
 ![end](/images/end.gif)
