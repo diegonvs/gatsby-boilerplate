@@ -40,7 +40,6 @@ export const handleSignUp = ({email, password}) => {
                 password: password
             })
             .then((user) => {
-                console.log(user);
                 resolve();
             })
             .catch((err) => {
