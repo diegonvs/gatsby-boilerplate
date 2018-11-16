@@ -20,9 +20,9 @@
     "node": ">= 8"
   },
   "scripts": {
-    "dev": "gatsby develop",
+    "dev": "rimraf public .cache && gatsby develop",
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
-    "develop": "gatsby develop",
+    "develop": "rimraf public .cache && gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build"
   },
@@ -71,6 +71,7 @@
   },
   "devDependencies": {
     "gh-pages": "^1.2.0",
-    "globby": "^8.0.1"
+    "globby": "^8.0.1",
+    "rimraf": "^2.6.2"
   }
 }
