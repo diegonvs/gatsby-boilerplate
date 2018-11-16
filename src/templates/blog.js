@@ -28,7 +28,7 @@ export default class Blog extends Component {
             <Auth needsAuth={needsAuth}>
                 <div className="blog">
                     <Helmet>
-                        <title>Blog Template</title>
+                        <title>{title}</title>
                         <meta name="description" content={excerpt} />
                         <meta name="og:description" content={excerpt} />
                         <meta name="twitter:description" content={excerpt} />
