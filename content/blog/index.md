@@ -1,4 +1,3 @@
 ---
 mainPage: true
-needsAuth: true
 ---
