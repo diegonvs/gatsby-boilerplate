@@ -24,7 +24,7 @@ export default class Onboarding extends Component {
     }
 
     render() {
-        let { mdx: { code: { body }, excerpt, timeToRead, frontmatter: { mainPage, title, stepNumber, needsAuth } } } = this.props.data;
+        let { mdx: { code: { body }, excerpt, timeToRead, frontmatter: { mainPage, title, stepNumber, description, needsAuth } } } = this.props.data;
         let {pageContext} = this.props;
 
         let previous = pageContext.previous;
@@ -47,17 +47,19 @@ export default class Onboarding extends Component {
                         />
                     </Helmet>
                     <header className="header">
-                        <LayoutNav />
-                        <div className="container-fluid">
-                            <div className="row">
-                                <div className="intro blog-intro text-center col">
-                                    <div className="container-fluid container-fluid-max-lg">
-                                        <h1 className="h1">Onboarding Template</h1>
-                                        <h2 className="h3">Getting started in something else here</h2>
+                        <LayoutNav opaque={!mainPage} fixed={mainPage}/>
+                        {mainPage &&
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="intro blog-intro text-center col">
+                                        <div className="container-fluid container-fluid-max-lg">
+                                            <h1 className="h1">{title}</h1>
+                                            <h2 className="h3">{description}</h2>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        }
                     </header>
                     <main className="content">
                         <div className="clay-site-container container">
@@ -66,6 +68,10 @@ export default class Onboarding extends Component {
                                     {!mainPage &&
                                         <>
                                         <MultiStepNav stepNumber={stepNumber} />
+                                        <div className="article-header">
+                                            <h1 className="clay-h1">{title}</h1>
+                                            <cite className="clay-h4">{description}</cite>
+                                        </div>
                                         <article>
                                             <MDXRenderer
                                                 components={{
@@ -123,6 +129,8 @@ export const pageQuery = graphql`
                 mainPage
                 stepNumber
                 needsAuth
+                description
+                title
             }
             code {
                 body

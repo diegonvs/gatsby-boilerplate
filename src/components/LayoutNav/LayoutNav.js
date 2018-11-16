@@ -41,10 +41,11 @@ class LayoutNav extends Component {
     }
 
     render() {
-        const { fixed = true } = this.props;
+        const { fixed = true, opaque = false } = this.props;
 
         const styles = classnames('navbar navbar-clay-site navbar-expand-lg navbar-dark', {
             'fixed-top': fixed,
+            'bg-primary': opaque
         });
 
         return (
