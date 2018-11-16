@@ -2,6 +2,10 @@ body {
 	background-color: $bg-color;
 	font-size: 1rem;
 
+	.bg-primary {
+		background-color: $primary-color;
+	}
+
 	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: $margin-top-body;
 	}
