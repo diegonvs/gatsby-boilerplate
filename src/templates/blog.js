@@ -42,17 +42,19 @@ export default class Blog extends Component {
                     </Helmet>
                     <main className="content">
                         <header className="header">
-                            <LayoutNav />
-                            <div className="container-fluid">
-                                <div className="row">
-                                    <div className="intro blog-intro text-center col">
-                                        <div className="container-fluid container-fluid-max-lg">
-                                            <h1 className="h1">Blog Template</h1>
-                                            <h2 className="h3">Where good ideas come from</h2>
+                            <LayoutNav opaque={!mainPage} fixed={mainPage}/>
+                            {mainPage &&
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="intro blog-intro text-center col">
+                                            <div className="container-fluid container-fluid-max-lg">
+                                                <h1 className="h1">Blog Template</h1>
+                                                <h2 className="h3">Where good ideas come from</h2>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            }
                         </header>
 
                         <div className="clay-site-container container">
