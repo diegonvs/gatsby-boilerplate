@@ -107,15 +107,12 @@ export default (props) => (
 									<Link className="navbar-brand" to="/">
 										<img className="logo mr-2" src={logoPath} alt="Clay" />
 										<span className="title">{process.env.PROJECT_NAME}</span>
-										{/* <small>by Liferay</small> */}
 									</Link>
 								</div>
 							</div>
 
 							<div className="sidebar-body mb-auto">
-								<div className="sidebar-search">
-									<Search placeholder="Search" />
-								</div>
+								<Search placeholder="Search" />
 
 								<Navigation sectionList={getSection(data)} location={props.location} />
 							</div>
