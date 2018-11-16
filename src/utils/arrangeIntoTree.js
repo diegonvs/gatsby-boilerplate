@@ -54,6 +54,7 @@ const regexSpace = /\s+/g;
 
 function sortBy(tree) {
 	if (tree.items) {
+		/* eslint-disable */
 		tree.items = tree.items.sort((a, b) => {
 			let titleA = a.title.toUpperCase().replace(regexSpace, '');
 			let titleB = b.title.toUpperCase().replace(regexSpace, '');
@@ -64,6 +65,7 @@ function sortBy(tree) {
 			if (titleA > titleB) return 1;
 			if (titleA < titleB) return -1;
 		});
+		/* eslint-enable */
 
 		tree.items.map((item) => sortBy(item));
 	}

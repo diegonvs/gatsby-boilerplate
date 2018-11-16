@@ -58,7 +58,7 @@ class Navigation extends Component {
 const Anchor = ({page}) => {
     if (page.items) {
         return(
-            <a className="align-middle" href="javascript:;">
+            <a className="align-middle" href="#no">
                 <span>{page.title}</span>
                 <svg className="collapse-toggle clay-icon icon-monospaced">
                     <use xlinkHref="/images/icons/icons.svg#caret-bottom" />

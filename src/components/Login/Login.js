@@ -63,7 +63,7 @@ class Login extends Component {
                                                 <div className="btn-group-item">
                                                     <a className="btn btn-secondary" onClick={(event) => {
                                                         this._handleSignUp(event);
-                                                    }} href="#">Sign Up</a>
+                                                    }} href="#no">Sign Up</a>
                                                 </div>
                                             </div>
                                         </div>
