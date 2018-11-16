@@ -36,7 +36,7 @@
     "clay-badge": "^2.2.0",
     "clay-button": "^2.2.0",
     "clay-charts": "^2.2.0",
-    "clay-css": "2.3.0",
+    "clay-css": "^2.4.1",
     "clay-dropdown": "^2.2.0",
     "clay-tooltip": "^2.2.0",
     "countries-list": "^2.3.2",

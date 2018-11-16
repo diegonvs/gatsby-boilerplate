@@ -3264,10 +3264,10 @@ clay-component@^2.4.1:
     metal-dom "^2.16.0"
     metal-state "^2.16.0"
 
-clay-css@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.3.0.tgz#5b85a9d44d29e7fcc9f8102646c23f208af79373"
-  integrity sha512-XrBW5MZPq6bVGmCOE7kMedU1Uq7sg763vWC9fIimWHfYL6GPvXByFYSIBAaexpkVmA2ODYEzPo3j/Spb3osI5Q==
+clay-css@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.4.1.tgz#b370de45b169b25bd89a93ec3e2c18d35247cc46"
+  integrity sha512-eTt+XdIKVcYKVA1Hs/J60GkFhlmCsc6lY3K3P1CqTe1c9DSotH2opSOrUIseeM7fWhR5qBnMaNLYqdi2GhAZ5Q==
 
 clay-dropdown@^2.2.0:
   version "2.4.1"
