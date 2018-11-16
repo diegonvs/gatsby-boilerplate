@@ -1,7 +1,7 @@
 {
   "name": "gatsby-boilerplate",
   "description": "An awesome boilerplate to start projects in Gatsby considering as starter point the development experience of Electric.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Diego Nascimento <diego.nascimento@liferay.com",
   "bugs": {
     "url": "https://github.com/diegonvs/gatsby-boilerplate"
@@ -15,7 +15,7 @@
     "clay",
     "wedeploy"
   ],
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "engines": {
     "node": ">= 8"
   },
