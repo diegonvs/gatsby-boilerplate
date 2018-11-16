@@ -1,13 +1,22 @@
 {
-  "private": true,
   "name": "gatsby-boilerplate",
-  "license": "MIT",
+  "description": "An awesome boilerplate to start projects in Gatsby considering as starter point the development experience of Electric.js",
+  "version": "1.0.1",
+  "author": "Diego Nascimento <diegonascimento@hotmail.com.br",
+  "bugs": {
+    "url": "https://github.com/diegonvs/gatsby-boilerplate"
+  },
+  "homepage": "https://gatsby-boilerplate.wedeploy.io#readme",
+  "keywords": ["gatsby", "gatsby-starter", "electric", "liferay", "clay", "wedeploy"],
+  "license": "BSD",
+  "engines": {
+    "node": ">= 8"
+  },
   "scripts": {
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
     "develop": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve",
-    "lh": "lighthouse-ci"
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.4",
