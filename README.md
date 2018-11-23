@@ -11,7 +11,7 @@ If you want to check the documentation 📚 click on this [link](https://github.
 
 # Setup
 
-0. Clone this repo or use Gatsby command line interface using `gatsby new https://github.com/diegonvs/gatsby-boilerplate`
+0. Clone this repo or use Gatsby command line interface using `gatsby new [your_site] https://github.com/diegonvs/gatsby-boilerplate`
 1. Run `npm install` or `yarn`
 2. Run `npm run develop` or `yarn develop` for development mode
 3. Run `npm run build` or `yarn build` for production mode
