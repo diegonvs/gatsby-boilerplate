@@ -24,7 +24,8 @@
     "deploy": "gatsby build && gh-pages -d public -b wedeploy",
     "develop": "rimraf public .cache && gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "dependencies": {
     "@mdx-js/mdx": "^0.15.4",
