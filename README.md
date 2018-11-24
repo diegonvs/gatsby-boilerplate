@@ -1,6 +1,6 @@
 # Gatsby Boilerplate 🚀
 
-[![Build Status](https://img.shields.io/travis/diegonvs/gatsby-boilerplate/master.svg?style=flat)](https://travis-ci.org/diegonvs/gatsby-boilerplate)
+[![Build Status](https://img.shields.io/travis/diegonvs/gatsby-boilerplate/master.svg?style=flat)](https://travis-ci.org/diegonvs/gatsby-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/diegonvs/gatsby-boilerplate.svg)](https://greenkeeper.io/)
 
 Gatsby Boilerplate is a [Gatsby](https://github.com/gatsbyjs/gatsby) starter with a better development experience and the same content creation experience than [Electric.js](https://github.com/electricjs/electric).
 
