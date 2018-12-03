@@ -27,7 +27,7 @@ export default (props) => (
     <StaticQuery
         query={graphql`
             query {
-                allMdx(filter: { fields: { slug: { regex: "/^blog/i"}, title: {  ne: "" } } },
+                allMdx(filter: { fields: { slug: { regex: "/^blog/i", ne: "blog/index.html"}} },
                     sort: {order:DESC, fields: frontmatter___date}
                 ) {
                     edges {
