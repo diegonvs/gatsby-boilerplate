@@ -7,9 +7,7 @@ const createPages = (actions, edges) => {
 	const {createPage, createRedirect} = actions;
 
 	edges.forEach(({node}, index) => {
-		const {slug, redirect, layout} = node.fields;
-
-		const {mainPage} = node.frontmatter;
+		const {slug, redirect, layout, mainPage} = node.fields;
 
 		const templateKey = slug.split('/')[0];
 
@@ -64,13 +62,7 @@ module.exports = async ({actions, graphql}) => {
 							layout
 							redirect
 							slug
-							title
-							weight
-							stepNumber
-						}
-						frontmatter {
 							mainPage
-							needsAuth
 						}
 						code {
 							scope
