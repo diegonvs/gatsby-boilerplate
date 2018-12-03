@@ -34,6 +34,8 @@ export default (props) => (
                         node {
                             fields {
                                 slug
+                            }
+                            frontmatter {
                                 title
                                 date(formatString: "MMMM DD, YYYY")
                                 description
@@ -46,9 +48,9 @@ export default (props) => (
             }
         `}
         render={({ allMdx: {edges} }) => {
-            const fieldsFn = ({ node: { fields } }) => fields;
+            const postsFn = ({ node: { fields, frontmatter } }) => ({...frontmatter, ...fields});
 
-            const posts = edges.map(fieldsFn);
+            const posts = edges.map(postsFn);
 
             return(
                 <>
