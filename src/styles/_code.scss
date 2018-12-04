@@ -85,15 +85,3 @@
 		color: rgba($brand-dark, 0.6);
 	}
 }
-
-.nav.nav-tabs.nav-code-tabs {
-	li:nth-last-child(3) + li > button {
-		font-size: 0;
-
-		&:before {
-			content: 'WEB COMPONENTS';
-			display: inline-block;
-			font-size: 13px;
-		}
-	}
-}
