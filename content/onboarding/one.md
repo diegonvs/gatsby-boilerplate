@@ -6,8 +6,11 @@ stepNumber: 1
 
 #### Github
 Clone the project running
-```sh
+```bash http
 git clone https://github.com/diegonvs/gatsby-boilerplate.git
+```
+```bash ssh
+git clone git@github.com:diegonvs/gatsby-boilerplate.git
 ```
 and after access `gatsby-boilerplate/` folder and run `yarn`.
 
