@@ -71,7 +71,7 @@
     "wowjs": "1.1.3"
   },
   "devDependencies": {
-    "gh-pages": "1.2.0",
+    "gh-pages": "2.0.1",
     "globby": "8.0.1",
     "rimraf": "2.6.2"
   }
