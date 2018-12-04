@@ -20,13 +20,13 @@ function arrangeIntoTree(paths) {
 		}
 
 		const path = node.link.split('/').filter(elem => elem);
-		let currentLevel = tree;
+        let currentLevel = tree || [];
 		for (let j = 0; j < path.length; j++) {
 			let part = path[j];
-			let existingPath = findWhere(currentLevel, 'id', part);
+            let existingPath = findWhere(currentLevel || [], 'id', part);
 
 			if (existingPath) {
-				currentLevel = existingPath.items;
+                currentLevel = existingPath.items || [];
 			} else if (node.id === part || node.id === 'index') {
 				// if (findWhere(currentLevel, 'id', part)) // se já existir na árvore eu dou continue.
 				currentLevel.push(node);
