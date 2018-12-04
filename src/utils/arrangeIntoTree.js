@@ -28,7 +28,6 @@ function arrangeIntoTree(paths) {
 			if (existingPath) {
                 currentLevel = existingPath.items || [];
 			} else if (node.id === part || node.id === 'index') {
-				// if (findWhere(currentLevel, 'id', part)) // se já existir na árvore eu dou continue.
 				currentLevel.push(node);
 			} else {
 				let nodePart = paths.find(elem => elem.link.endsWith(`${part}/index`));
