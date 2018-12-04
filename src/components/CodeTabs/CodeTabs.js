@@ -23,7 +23,7 @@ class CodeTabs {
 	}
 
 	_getTabLabelFromElement(element) {
-		return element.querySelector('.gatsby-highlight').getAttribute('data-language');
+		return element.getAttribute('data-label');
 	}
 
 	_hide(element) {
