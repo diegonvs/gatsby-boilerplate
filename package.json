@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@mdx-js/mdx": "0.15.7",
-    "@mdx-js/tag": "0.16.1",
+    "@mdx-js/tag": "0.16.6",
     "babel-preset-metal-jsx": "0.1.1",
     "browser-monads": "1.0.0",
     "classnames": "2.2.6",
