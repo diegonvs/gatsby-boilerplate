@@ -23,12 +23,18 @@ function arrangeIntoTree(paths) {
         let currentLevel = tree || [];
 		for (let j = 0; j < path.length; j++) {
 			let part = path[j];
-            let existingPath = findWhere(currentLevel || [], 'id', part);
 
-			if (existingPath) {
-                currentLevel = existingPath.items || [];
-			} else if (node.id === part || node.id === 'index') {
+			// Last part of the path, just add it to the current level
+			if (j === path.length - 1) {
 				currentLevel.push(node);
+				break;
+			}
+
+			let existingPath = findWhere(currentLevel || [], 'id', part);
+
+			// If the path exist, navigate, if not, create it and navigate
+			if (existingPath) {
+				currentLevel = existingPath.items || [];
 			} else {
 				let nodePart = paths.find(elem => elem.link.endsWith(`/${part}/index`));
 				let newPart = {
