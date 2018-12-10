@@ -30,7 +30,7 @@ function arrangeIntoTree(paths) {
 			} else if (node.id === part || node.id === 'index') {
 				currentLevel.push(node);
 			} else {
-				let nodePart = paths.find(elem => elem.link.endsWith(`${part}/index`));
+				let nodePart = paths.find(elem => elem.link.endsWith(`/${part}/index`));
 				let newPart = {
 					id: part,
 					items: [],
