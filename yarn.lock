@@ -13355,10 +13355,10 @@ websocket-extensions@>=0.1.1:
   resolved "https://registry.yarnpkg.com/websocket-extensions/-/websocket-extensions-0.1.3.tgz#5d2ff22977003ec687a4b87073dfbbac146ccf29"
   integrity sha512-nqHUnMXmBzT0w570r2JpJxfiSD1IzoI+HGVdd3aZ0yNi3ngvQ4jv1dtHt5VGxfI2yj5yqImPhOK4vmIh2xMbGg==
 
-wedeploy@4.5.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/wedeploy/-/wedeploy-4.5.0.tgz#011b5e557c493e149f9b20d072abfc423efc444f"
-  integrity sha512-G9ChT2iZ9hVPTyUt6bKqD25tFeHLAZk53YF9fRgjnKOV7+PZOBr9UJPq/nuhRIgJMHhs0X+DAlUNbnLZkCsLMQ==
+wedeploy@4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/wedeploy/-/wedeploy-4.5.1.tgz#28f89142c9e66bdadb571a8eb445b809fecd7104"
+  integrity sha512-udbJpNHHiD11qh0jxRSXLym++2E3NwYBjpBTPvHPYrBxRnPpLZl/9KHJlDactsWJpVabiUD6C5UxiIO3AtzeSA==
   dependencies:
     form-data "^2.3.2"
     metal "^2.16.5"
