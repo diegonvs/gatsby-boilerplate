@@ -3019,10 +3019,10 @@ clay-alert@2.5.0:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-badge@2.4.1:
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.4.1.tgz#06cfbe312aeda602540d0b10d0cb175381c93cbf"
-  integrity sha512-8sdVRk9Wevl0yKzCydobbxSZ02XxMH9OjBgk5zvbSML2+vmI32tael0gYWbKNW/3fxu5n/qb7l49HcEHHOoP/g==
+clay-badge@2.5.0:
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.5.0.tgz#3d7190a52e23bbfec7135dfbd1d626258b6abf0f"
+  integrity sha512-h1UjWzJNPJr3CEf+RtBU0IcrHiQ3d3RQqPJZdonAGulFGmn00vau7GGzG9AdNqgt1Bi8RnCPnvU/oN8ZlZoH4g==
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
