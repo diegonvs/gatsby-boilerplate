@@ -98,21 +98,12 @@ export default (props) => (
 
 					<nav
 						ref={SidebarRef}
-						className="sidebar-toggler-content sidenav-fixed sidenav-menu-slider"
+						className="sidebar-toggler-content sidenav-fixed sidenav-menu-slider mt-5"
 						id="clay-sidebar"
 					>
 						<SideNavScroll>
-							<div className="sidebar-header">
-								<div className="navbar navbar-expand-lg navbar-header">
-									<Link className="navbar-brand" to="/">
-										<img className="logo mr-2" src={logoPath} alt="Clay" />
-										<span className="title">{process.env.PROJECT_NAME}</span>
-									</Link>
-								</div>
-							</div>
-
-							<div className="sidebar-body mb-auto">
-								<Search placeholder="Search" />
+							<div className="sidebar-body mb-auto mt-5">
+								{/* <Search placeholder="Search" /> */}
 
 								<Navigation sectionList={getSection(data)} location={props.location} />
 							</div>
