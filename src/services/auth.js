@@ -55,12 +55,6 @@ export const isLoggedIn = () => {
 
 export const logout = () => {
     setUser({});
-    auth
-        .signOut()
-        .then(function () {
-            alert('User is signed out!');
-        })
-        .catch(function (err) {
-            alert(err);
-        });
+    return auth
+        .signOut();
 }

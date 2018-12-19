@@ -28,6 +28,17 @@ class LayoutNav extends Component {
         }
     }
 
+    _handleLogout() {
+        logout()
+            .then(() => {
+                this.forceUpdate();
+            })
+            .catch((error) => {
+                alert(error);
+                window.location.reload();
+            });
+    }
+
     componentDidMount() {
         if (!this.props.static) {
             this._rootNode.addEventListener('scroll', this._addScroll, false);
@@ -73,11 +84,11 @@ class LayoutNav extends Component {
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/updates/">Updates</Link>
                         </li>
-                        {isLoggedIn() ? (
+                        {!isLoggedIn() ? '' : (
                             <li className="nav-item">
                                 <Link className="nav-link ml-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
                             </li>
-                        ) : ''}
+                        )}
                         <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href={process.env.GITHUB_REPO}  target="_blank" rel="noopener noreferrer">
                                 <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
