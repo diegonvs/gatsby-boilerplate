@@ -27,16 +27,22 @@
 		margin-bottom: $base-size * 0.5;
 	}
 
+	.docs-logout {
+		padding-left: 48px;
+		padding-right: 48px;
+		margin-top: 20px;
+		text-align: right;
+		.clay-p {
+			font-size: 14px;
+		}
+	}
+
 	blockquote {
 		border-left: 0.25em solid #dfe2e5;
 		color: #6a737d;
 		margin-bottom: 2em;
 		padding: 0 1em;
 	}
-}
-
-.blog {
-	
 }
 
 .about {
