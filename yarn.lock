@@ -3040,11 +3040,12 @@ clay-alert@2.5.1:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-badge@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.5.0.tgz#3d7190a52e23bbfec7135dfbd1d626258b6abf0f"
-  integrity sha512-h1UjWzJNPJr3CEf+RtBU0IcrHiQ3d3RQqPJZdonAGulFGmn00vau7GGzG9AdNqgt1Bi8RnCPnvU/oN8ZlZoH4g==
+clay-badge@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/clay-badge/-/clay-badge-2.5.1.tgz#91c1bee39c4134f3c28aa60f58e94957a953b4f2"
+  integrity sha512-d/JoIRUkmXNhd1yFM6yAj2KQJ/YWw8GTfcYnrZIaQYifhlJGt/maTuJWhneNx29CSj14jTNQQ7U7JxWJy+Laow==
   dependencies:
+    clay-component "^2.5.1"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
