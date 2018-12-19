@@ -3211,10 +3211,10 @@ clay-radio@^2.5.0:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-tooltip@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.5.0.tgz#da77f21b969f73f4f52f0a54627cf71c469ae30f"
-  integrity sha512-nfQGl8zqSQH69+pbC0XukxQUIJCY+vWSoqWEhm4l87UPaWlzmcWHT7lmnZP2CgSVs4BGS+jwHhuGIkUe90KrNw==
+clay-tooltip@2.5.1:
+  version "2.5.1"
+  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.5.1.tgz#7108144eed03f265dd05d4b82eb443357393a812"
+  integrity sha512-F3Ha9mlxxDIZPjWTzDd3ZqZEC8houFPh8UWyxN9hFvjaMM+xp5vA7eCLZ7/nBUzLGrhG0xBqA1/XZCSlxYNr5A==
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
