@@ -32,7 +32,7 @@ export default class Blog extends Component {
                         <meta name="description" content={excerpt} />
                         <meta name="og:description" content={excerpt} />
                         <meta name="twitter:description" content={excerpt} />
-                        <meta name="og:title" content="Blog Template" />
+                        <meta name="og:title" content={title} />
                         <meta name="og:type" content="article" />
                         <meta name="twitter.label1" content="Reading time" />
                         <meta
