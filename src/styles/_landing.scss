@@ -69,7 +69,7 @@
 }
 
 .intro {
-    background-color: $primary-color;
+    background-color: $brand-primary;
     // background-image: url('/images/home/patternbg.svg');
     background-size: auto;
     color: $brand-light;
@@ -107,7 +107,7 @@
 
         &:hover, &:focus {
             background-color: white;
-            color: $primary-color;
+            color: $brand-primary;
         }
     }
 
@@ -176,7 +176,7 @@
             transition: all 0.4s;
 
             &:hover {
-                border-color: $primary-color;
+                border-color: $brand-primary;
                 text-decoration: none;
             }
         }

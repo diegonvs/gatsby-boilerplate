@@ -19,12 +19,17 @@
 }
 
 .social .social-buttons .social-button {
+    color: $brand-primary;
     transition: background-color 0.3s ease-in-out;
     display: inline-block;
     height: 48px;
     width: 48px;
     border-bottom: none;
     border-radius: 50%;
+}
+
+.social .social-buttons .social-button:hover {
+    color: $brand-secondary;
 }
 
 img {

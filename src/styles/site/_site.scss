@@ -2,9 +2,26 @@ body {
 	background-color: $bg-color;
 	font-size: 1rem;
 
-	.bg-primary {
-		background-color: $primary-color;
-	}
+    .bg-primary, .btn-primary {
+        background-color: $brand-primary !important;
+    }
+
+    .btn-primary {
+        border-color: $brand-primary !important;
+    }
+
+    .btn-primary:hover,.btn-primary:focus {
+        background-color: $brand-secondary !important;
+        border-color: $brand-secondary !important;
+    }
+
+    .link-primary {
+        color: $brand-primary;
+    }
+
+    .multi-step-item.active .multi-step-icon {
+        background-color: $brand-primary;
+    }
 
 	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: $margin-top-body;
