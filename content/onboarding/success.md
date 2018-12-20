@@ -4,6 +4,6 @@ title: Success
 stepNumber: 4
 ---
 
-For more details access the documentation [here](/docs/).
+For more information, see [the documentation](/docs/).
 
 ![end](/images/end.gif)
