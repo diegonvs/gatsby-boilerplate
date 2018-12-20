@@ -3,7 +3,7 @@ body {
 	font-size: 1rem;
 
 	.bg-primary {
-		background-color: $primary-color;
+		background-color: $brand-primary;
 	}
 
 	@media (max-width: $grid-float-breakpoint - 1) {
