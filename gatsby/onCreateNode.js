@@ -16,7 +16,8 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 			stepNumber,
 			short,
 			needsAuth,
-			updates
+			updates,
+			url
 		} = node.frontmatter;
 
 		const {relativePath} = getNode(node.parent);
@@ -115,6 +116,12 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 			node,
 			name: 'updates',
 			value: updates || [],
+		});
+
+		createNodeField({
+			node,
+			name: 'url',
+			value: url || [],
 		})
 	}
 };
