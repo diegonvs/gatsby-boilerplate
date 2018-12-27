@@ -23,6 +23,10 @@ body {
         background-color: $brand-primary;
     }
 
+    .gatsby-highlight-code-line {
+        background-color: #45402e;
+    }
+
 	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: $margin-top-body;
 	}
