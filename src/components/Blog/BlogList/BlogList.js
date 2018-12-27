@@ -56,18 +56,17 @@ export default (props) => (
                 <>
                     <BlogList>
                         {posts.map(({slug, title, description, author, banner, date}, index) => (
-                            <div key={index} className="card">
-                                <img className="mx-auto" alt="banner" src={banner} />
-                                <div className="card-body">
-                                    <h2 className="clay-h2 font-weight-bold">{title}</h2>
-                                    <p className="clay-p">{description}</p>
-                                    <br />
-                                    <small style={{float: "right"}}> {`by ${author} at ${date}`}</small>
-                                    <Link className="link-primary" to={slug}>
-                                        <span className="learn-more">Learn More</span>
-                                    </Link>
+                            <Link className="link-primary" to={slug}>
+                                <div key={index} className="card">
+                                    <img className="mx-auto" alt="banner" src={banner} />
+                                    <div className="card-body">
+                                        <h2 className="clay-h2 font-weight-bold">{title}</h2>
+                                        <p className="clay-p">{description}</p>
+                                        <br />
+                                        <small style={{float: "right"}}> {`by ${author} at ${date}`}</small>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </BlogList>
                 </>
