@@ -2,6 +2,7 @@
 description: Fetch all files to build your project!
 title: Installing
 stepNumber: 1
+short: Clone
 ---
 
 ## Github

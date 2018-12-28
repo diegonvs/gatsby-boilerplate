@@ -23,6 +23,21 @@ body {
         background-color: $brand-primary;
     }
 
+    .gatsby-highlight-code-line {
+        background-color: #45402e;
+    }
+
+    blockquote {
+        background: #f9f9f9;
+        border-left: 10px solid #ccc;
+        margin: 1.5em 10px;
+        padding: 0.5em 10px;
+    }
+
+    blockquote p {
+        display: inline;
+    }
+
 	@media (max-width: $grid-float-breakpoint - 1) {
 		margin-top: $margin-top-body;
 	}

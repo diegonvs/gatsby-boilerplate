@@ -2,6 +2,7 @@
 description: See the magic(or build)happens.
 title: Build
 stepNumber: 3
+short: Run
 ---
 
 For development mode, follow these steps: 
