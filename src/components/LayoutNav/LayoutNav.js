@@ -51,10 +51,6 @@ class LayoutNav extends Component {
         }
     }
 
-    _handleLogout() {
-        logout();
-    }
-
     render() {
         const { fixed = true, opaque = false, effect = false } = this.props;
 
