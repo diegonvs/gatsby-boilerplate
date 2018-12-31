@@ -103,7 +103,7 @@ export default (props) => (
 					>
 						<SideNavScroll>
 							<div className="sidebar-body mb-auto mt-5">
-								{/* <Search placeholder="Search" /> */}
+								<Search placeholder="Search" />
 
 								<Navigation sectionList={getSection(data)} location={props.location} />
 							</div>
