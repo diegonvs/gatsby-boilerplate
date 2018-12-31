@@ -5,6 +5,7 @@ import React, { Component } from 'react';
 
 import SimpleFooter from '../components/SimpleFooter';
 import Sidebar from '../components/Sidebar';
+import LayoutNav from '../components/LayoutNav';
 import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
 import Typography from '../components/Typography';
@@ -42,6 +43,10 @@ export default class Docs extends Component {
                             content={`${timeToRead} min read`}
                         />
                     </Helmet>
+
+                    <header>
+                        <LayoutNav effect={true} static={true} />
+                    </header>
                     <main className="content">
                         <Sidebar location={location} />
                         <div className="sidebar-offset">

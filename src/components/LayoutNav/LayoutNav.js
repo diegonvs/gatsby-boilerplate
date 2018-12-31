@@ -2,7 +2,7 @@ import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
 import { Link } from "gatsby";
 import classnames from 'classnames';
-import {isLoggedIn, logout} from '../../services/auth';
+import { isLoggedIn, logout } from '../../services/auth';
 
 class LayoutNav extends Component {
     constructor() {
@@ -28,29 +28,34 @@ class LayoutNav extends Component {
         }
     }
 
+    componentDidMount() {
+        if (!this.props.static) {
+            this._rootNode.addEventListener('scroll', this._addScroll, false);
+        }
+    }
+
+    componentWillUnmount() {
+        if (!this.props.static) {
+            this._rootNode.removeEventListener('scroll', this._addScroll, false);
+        }
+    }
+
     _handleLogout() {
         logout();
     }
 
-    componentDidMount() {
-        this._rootNode.addEventListener('scroll', this._addScroll, false);
-    }
-
-    componentWillUnmount() {
-        this._rootNode.removeEventListener('scroll', this._addScroll, false);
-    }
-
     render() {
-        const { fixed = true, opaque = false } = this.props;
+        const { fixed = true, opaque = false, effect = false } = this.props;
 
         const styles = classnames('navbar navbar-clay-site navbar-expand-lg navbar-dark', {
             'fixed-top': fixed,
+            'scroll': effect,
             'bg-primary': opaque
         });
 
         return (
             <nav ref="navElement" className={styles}>
-                <div className="container-fluid container-fluid-max-lg">
+                <div className="container-fluid container-fluid-max-xl">
                     <Link to="/" className="navbar-brand">
                         <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="" />
                         <span className="title align-middle">{process.env.PROJECT_NAME}</span>
