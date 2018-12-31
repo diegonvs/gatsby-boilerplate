@@ -2,6 +2,7 @@ import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
 import { Link } from "gatsby";
 import classnames from 'classnames';
+
 import { isLoggedIn, logout } from '../../services/auth';
 
 class LayoutNav extends Component {
@@ -28,6 +29,17 @@ class LayoutNav extends Component {
         }
     }
 
+    _handleLogout() {
+        logout()
+            .then(() => {
+                this.forceUpdate();
+            })
+            .catch((error) => {
+                alert(error);
+                window.location.reload();
+            });
+    }
+
     componentDidMount() {
         if (!this.props.static) {
             this._rootNode.addEventListener('scroll', this._addScroll, false);
@@ -38,10 +50,6 @@ class LayoutNav extends Component {
         if (!this.props.static) {
             this._rootNode.removeEventListener('scroll', this._addScroll, false);
         }
-    }
-
-    _handleLogout() {
-        logout();
     }
 
     render() {

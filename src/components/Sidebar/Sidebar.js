@@ -7,7 +7,7 @@ import Search from './Search';
 const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
 
-const onClick = () => {
+const expandToggler = () => {
 	SidebarRef.current.classList.toggle('toggler-expanded');
 }
 
@@ -89,7 +89,7 @@ export default (props) => (
 							<span className="title h1 font-weight-bold mb-0 p-1">{process.env.PROJECT_NAME}</span>
 						</Link>
 
-						<button onClick={onClick} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<button onClick={expandToggler} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
 								<use xlinkHref="/images/icons/icons.svg#bars" />
 							</svg>
