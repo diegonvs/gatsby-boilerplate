@@ -1,4 +1,4 @@
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import React, { Component } from 'react';
@@ -10,7 +10,7 @@ import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
 import Typography from '../components/Typography';
 import Auth from '../components/Auth';
-import { isLoggedIn, logout } from '../services/auth';
+import { logout } from '../services/auth';
 
 export default class Docs extends Component {
     componentDidMount() {
@@ -57,11 +57,6 @@ export default class Docs extends Component {
                     <main className="content">
                         <Sidebar location={location} />
                         <div className="sidebar-offset">
-                            {!isLoggedIn() ? '' : (
-                                <div className="docs-logout">
-                                    <Link className="clay-p" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
-                                </div>
-                            )}
                             <header>
                                 <div className="clay-site-container container-fluid">
                                     <h1>{title}</h1>
