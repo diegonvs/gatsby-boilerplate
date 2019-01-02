@@ -3,6 +3,7 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 
 	if (node.internal.type === 'Mdx') {
 		const {
+			alwaysActive,
 			layout,
 			path,
 			redirect,
@@ -26,6 +27,12 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 		if (!slug) {
 			slug = relativePath.replace('.md', '.html');
 		}
+
+		createNodeField({
+			name: 'alwaysActive',
+			node,
+			value: alwaysActive || false,
+		});
 
 		createNodeField({
 			name: 'title',
