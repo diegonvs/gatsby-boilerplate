@@ -81,7 +81,6 @@ export default (props) => (
 						node {
 							fields {
 								alwaysActive
-								layout
 								redirect
 								slug
 								title

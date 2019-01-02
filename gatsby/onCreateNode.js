@@ -4,7 +4,6 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 	if (node.internal.type === 'Mdx') {
 		const {
 			alwaysActive,
-			layout,
 			path,
 			redirect,
 			title,
@@ -62,12 +61,6 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 			node,
 			name: 'redirect',
 			value: redirect,
-		});
-
-		createNodeField({
-			node,
-			name: 'layout',
-			value: layout,
 		});
 
 		createNodeField({
