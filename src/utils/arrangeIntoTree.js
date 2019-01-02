@@ -41,7 +41,7 @@ function arrangeIntoTree(paths) {
 					id: part,
 					items: [],
 					title: nodePart.title,
-					weight: nodePart.weight,
+					order: nodePart.order,
 				}
 
 				currentLevel.push(newPart);
@@ -55,23 +55,9 @@ function arrangeIntoTree(paths) {
 	return tree;
 }
 
-const regexSpace = /\s+/g;
-
 function sortBy(tree) {
 	if (tree.items) {
-		/* eslint-disable */
-		tree.items = tree.items.sort((a, b) => {
-			let titleA = a.title.toUpperCase().replace(regexSpace, '');
-			let titleB = b.title.toUpperCase().replace(regexSpace, '');
-
-			if (a.weight < b.weight) return 1;
-			if (a.weight > b.weight) return -1;
-
-			if (titleA > titleB) return 1;
-			if (titleA < titleB) return -1;
-		});
-		/* eslint-enable */
-
+		tree.items = tree.items.sort((a, b) => a.order - b.order);
 		tree.items.map((item) => sortBy(item));
 	}
 

@@ -1,6 +1,6 @@
 ---
 title: "From Blog template"
-weight: 1
+order: 1
 ---
 
 ## Let's start migrating content from `Blog` Template:

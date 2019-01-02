@@ -1,6 +1,6 @@
 ---
 title: "What is?"
-weight: 2
+order: 1
 ---
 
 ## What is Electric and Gatsby?

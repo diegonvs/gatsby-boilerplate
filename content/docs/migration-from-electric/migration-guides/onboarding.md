@@ -1,6 +1,6 @@
 ---
 title: "From Tutorials template"
-weight: 1
+order: 3
 ---
 
 ## Let's start migrating content from `Tutorials` Template:

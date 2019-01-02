@@ -16,7 +16,7 @@ const getSection = ({allMdx: {edges}}) => {
 		const {
 			slug,
 			title,
-			weight,
+			order,
 			layout,
 		} = node.fields;
 		const slugWithoutExtension = slug.replace('.html', '');
@@ -27,7 +27,7 @@ const getSection = ({allMdx: {edges}}) => {
 			layout,
 			link: '/' + slugWithoutExtension,
 			title,
-			weight,
+			order,
 		};
 	});
 
@@ -70,7 +70,7 @@ export default (props) => (
 								redirect
 								slug
 								title
-								weight
+								order
 							}
 						}
 					}
