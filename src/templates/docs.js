@@ -83,7 +83,7 @@ export default class Docs extends Component {
                                 </div>
                             </div>
 
-                            <SimpleFooter githubRepo={process.env.GITHUB_REPO} />
+                            <SimpleFooter editContentURL={process.env.EDIT_CONTENT_URL} issuesURL={process.env.ISSUES_URL} slug={this.props["*"]}/>
                         </div>
                     </main>
                 </div>
