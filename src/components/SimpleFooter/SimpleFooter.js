@@ -2,7 +2,7 @@ import React from 'react';
 
 const SimpleFooter = (props) => {
 
-    const {githubRepo, issuesURL} = props;
+    const {editContentURL, issuesURL, slug} = props;
 
     return (
         <footer className="clay-site-container container-fluid">
@@ -20,7 +20,7 @@ const SimpleFooter = (props) => {
                             </a>
                         </li>
                         <li>
-                            <a className="rounded-circle sticker sticker-secondary" href={`${githubRepo}`}  target="_blank" rel="noopener noreferrer">
+                            <a className="rounded-circle sticker sticker-secondary" href={`${editContentURL}/${slug.replace("html", "md")}`} target="_blank" rel="noopener noreferrer">
                                 <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
                             </a>
                         </li>
