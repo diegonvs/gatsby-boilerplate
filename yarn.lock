@@ -3632,10 +3632,10 @@ cosmiconfig@^5.0.0, cosmiconfig@^5.0.5:
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
 
-countries-list@2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/countries-list/-/countries-list-2.3.2.tgz#9306d1d98e141f81abfa2649e291ceaa2f6c0c4e"
-  integrity sha512-krycuc2+OLaoMgUk30/mkmM7GtLn1cx25umFjJr7k1O/wusWRi0UcTdYm2/4+Ei5dz0EBau7PWJQWJYQ+wsEiw==
+countries-list@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/countries-list/-/countries-list-2.4.1.tgz#3c0ac5c77d41120120d5d7f538e42a7e48435c9f"
+  integrity sha512-E+vhqiQxKkWjBBvlJVaHhuiv0GRDl6YFKAbe3rPx/AAGoHY96bwRv743DVW0R44zaFq2o3hqIWjWiUxZGwqiGQ==
 
 create-ecdh@^4.0.0:
   version "4.0.3"
