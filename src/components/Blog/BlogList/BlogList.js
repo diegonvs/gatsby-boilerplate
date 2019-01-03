@@ -67,7 +67,7 @@ export default (props) => (
 
 const externalLinkTo = (post, index) => {
     return(
-        <a className="link-primary" href={post.url}>
+        <a className="link-primary" target="_blank" rel="noopener noreferrer" href={post.url}>
             {card(post, index)}
         </a>
     );
