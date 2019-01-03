@@ -25,11 +25,11 @@ const createPages = (actions, edges) => {
 			});
 		}
 
-		let previous = index === 0 ? false : edges[index - 1].node;
-		let next = index === edges.length - 1 ? false : edges[index + 1].node;
+		if (!redirect) {
+            let previous = index === 0 ? false : edges[index - 1].node;
+            let next = index === edges.length - 1 ? false : edges[index + 1].node;
 
-		if (redirect !== undefined) {
-			createPage({
+            createPage({
 				path: slug,
 				component: componentWithMDXScope(
 					path.resolve(__dirname, `../src/templates/${templateKey}.js`),
