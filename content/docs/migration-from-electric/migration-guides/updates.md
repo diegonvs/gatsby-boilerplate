@@ -1,6 +1,6 @@
 ---
 title: "From Updates template"
-weight: 1
+order: 4
 ---
 
 ## Let's start migrating content from `Updates` Template:

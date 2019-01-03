@@ -3,11 +3,11 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 
 	if (node.internal.type === 'Mdx') {
 		const {
-			layout,
+			alwaysActive,
 			path,
 			redirect,
 			title,
-			weight,
+			order,
 			date,
 			description,
 			author,
@@ -26,6 +26,12 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 		if (!slug) {
 			slug = relativePath.replace('.md', '.html');
 		}
+
+		createNodeField({
+			name: 'alwaysActive',
+			node,
+			value: alwaysActive || false,
+		});
 
 		createNodeField({
 			name: 'title',
@@ -47,20 +53,14 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 
 		createNodeField({
 			node,
-			name: 'weight',
-			value: weight || 0,
+			name: 'order',
+			value: order,
 		});
 
 		createNodeField({
 			node,
 			name: 'redirect',
 			value: redirect,
-		});
-
-		createNodeField({
-			node,
-			name: 'layout',
-			value: layout,
 		});
 
 		createNodeField({

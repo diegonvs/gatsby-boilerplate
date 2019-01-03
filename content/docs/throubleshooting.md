@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting"
-weight: 6
+order: 2
 ---
 
 Before create a bug on project's repository, check the following quick tips to solve some troubles:

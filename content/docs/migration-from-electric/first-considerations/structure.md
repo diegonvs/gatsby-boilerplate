@@ -1,6 +1,6 @@
 ---
 title: "Structure"
-weight: 4
+order: 3
 ---
 
 ## `Content` folder

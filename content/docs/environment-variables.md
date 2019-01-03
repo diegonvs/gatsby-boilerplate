@@ -1,6 +1,6 @@
 ---
 title: "Enviroment Variables"
-weight: 2
+order: 5
 ---
 
 ## Config and enviroment(.env) files

@@ -1,6 +1,6 @@
 ---
 title: "Deployment"
-weight: 2
+order: 4
 ---
 
 # Deployment on Cloud

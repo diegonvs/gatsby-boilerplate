@@ -1,6 +1,6 @@
 ---
 title: "From Docs template"
-weight: 1
+order: 2
 ---
 
 ## Let's start migrating content from `Docs` Template:

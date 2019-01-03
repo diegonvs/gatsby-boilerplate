@@ -1,5 +1,4 @@
 import { Link, StaticQuery, graphql } from 'gatsby';
-import arrangeIntoTree from '../../utils/arrangeIntoTree';
 import Navigation from './Navigation';
 import React, {Component} from 'react';
 import Search from './Search';
@@ -9,30 +8,45 @@ const SideNavRef = React.createRef();
 
 const expandToggler = () => {
 	SidebarRef.current.classList.toggle('toggler-expanded');
-}
+};
 
-const getSection = ({allMdx: {edges}}) => {
-	const resolveNode = edges.map(({node}) => {
-		const {
-			slug,
-			title,
-			weight,
-			layout,
-		} = node.fields;
-		const slugWithoutExtension = slug.replace('.html', '');
-		const pathSplit = slugWithoutExtension.split('/');
+const getSection = data => {
+	const elements = data.allMdx.edges.map(({node}) => {
+		const { fields: { slug, title, alwaysActive, order } } = node;
 
-		return {
-			id: pathSplit[pathSplit.length - 1],
-			layout,
-			link: '/' + slugWithoutExtension,
-			title,
-			weight,
-		};
+		return toSectionElements(slug.replace('.html', ''), title, order, alwaysActive);
 	});
 
-	return arrangeIntoTree(resolveNode);
-}
+	let rootElements = elements.filter(path => path.isRoot);
+
+	return rootElements.map(path => toSectionItem(path, elements))
+		.sort((a, b) => a.order - b.order);
+};
+
+const toSectionElements = (slug, title, order, alwaysActive) => {
+	const slugs = slug.split("/");
+	const lastSlug = slugs[slugs.length - 1];
+	const penultimateSlug = slugs[slugs.length - 2];
+
+	const id = lastSlug === "index" ? penultimateSlug : lastSlug;
+	const link = '/' + slug;
+	const parentLink = '/' + slug.substring(0, slug.lastIndexOf("/") + 1);
+	const isFolder = lastSlug === "index";
+	const isRoot = (slugs.length === 3 && isFolder) || (slugs.length === 2 && !isFolder);
+
+	return {id, link, title, parentLink, isFolder, isRoot, order, alwaysActive};
+};
+
+const toSectionItem = (item, paths) => {
+	if (item.isFolder) {
+		item.items = paths.filter(path => path.link !== item.link)
+			.filter(path => path.link === (item.parentLink + path.id + (path.isFolder ? "/index" : "")))
+			.map(path => toSectionItem(path, paths))
+			.sort((a, b) => a.order - b.order);
+	}
+
+	return item;
+};
 
 let scrollTop = 0;
 
@@ -66,11 +80,11 @@ export default (props) => (
 					edges {
 						node {
 							fields {
-								layout
+								alwaysActive
 								redirect
 								slug
 								title
-								weight
+								order
 							}
 						}
 					}
