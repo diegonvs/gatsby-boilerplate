@@ -7,7 +7,17 @@ module.exports = ({actions, stage}) => {
 		module = {
 			rules: [
 				{
-					test: /wowjs|clay-charts|clay-alert|clay-badge|clay-button|clay-dropdown|clay-tooltip|metal-clipboard|wedeploy/,
+					test: [
+						path.resolve(__dirname, '../node_modules/wowjs'),
+						path.resolve(__dirname, '../node_modules/clay-charts'),
+						path.resolve(__dirname, '../node_modules/clay-alert'),
+						path.resolve(__dirname, '../node_modules/clay-badge'),
+						path.resolve(__dirname, '../node_modules/clay-button'),
+						path.resolve(__dirname, '../node_modules/clay-dropdown'),
+						path.resolve(__dirname, '../node_modules/clay-tooltip'),
+						path.resolve(__dirname, '../node_modules/metal-clipboard'),
+						path.resolve(__dirname, '../node_modules/wedeploy')
+					],
 					loader: 'null-loader',
 				},
 			],
