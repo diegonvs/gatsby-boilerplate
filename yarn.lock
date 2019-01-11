@@ -2934,14 +2934,14 @@ classnames@2.2.6:
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
-clay-alert@2.5.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/clay-alert/-/clay-alert-2.5.1.tgz#67eadc9c58cf2e858e00dc538afe52ac37d7c81a"
-  integrity sha512-zd9jLquTKQHCV0dXnSfQCzsaWNao2ZOtOv7QoBrS5vpB9cDQRZWZBznQCx0nms+9KiybMdYns/I+xtXGfqyhfA==
+clay-alert@2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/clay-alert/-/clay-alert-2.6.0.tgz#df9d8c4d868f384d83d0486b2168112a4f877a22"
+  integrity sha512-ZWGIRilBjnaG7Xh/K+mdsqka4ZWhIwbNw9pxGTzmKnPrr5LW3Ccvx/l+ChRqRDS8wITGlRAaRFZv5BeKOaN8yQ==
   dependencies:
-    clay-button "^2.5.1"
-    clay-component "^2.5.1"
-    clay-icon "^2.5.1"
+    clay-button "^2.6.0"
+    clay-component "^2.6.0"
+    clay-icon "^2.6.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
@@ -2967,6 +2967,19 @@ clay-button@2.5.1, clay-button@^2.5.1:
   dependencies:
     clay-component "^2.5.1"
     clay-icon "^2.5.1"
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-button@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/clay-button/-/clay-button-2.6.0.tgz#7974a840d73ce65491e5f41ded74add1da80ddff"
+  integrity sha512-sEwYY6Wr9KDXn0ekoqjW03KycGbFlVerxycFonf6/oJCfzdhw453Kamam9pftH8fotyTKtjZ+JdSyLwv57z8Zw==
+  dependencies:
+    clay-component "^2.6.0"
+    clay-icon "^2.6.0"
     metal "^2.16.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
@@ -3017,6 +3030,16 @@ clay-component@^2.5.1:
     metal-dom "^2.16.0"
     metal-state "^2.16.0"
 
+clay-component@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.6.0.tgz#69a389be03d5e25e3ec6010fd4acb8bdddd87cca"
+  integrity sha512-G7orbtP3X4Oez3Cijv5ZU2u3zvs2RmJJFGzOxSWtn2E2EIc/zkHTr565cqa57qfPGMPuD6cIP04TrCFTiAduiA==
+  dependencies:
+    metal "^2.16.0"
+    metal-component "^2.16.0"
+    metal-dom "^2.16.0"
+    metal-state "^2.16.0"
+
 clay-css@2.5.1:
   version "2.5.1"
   resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.5.1.tgz#e47a2427d16766502b09487441ec31dc48873720"
@@ -3049,6 +3072,17 @@ clay-icon@^2.5.1:
   integrity sha512-P9mWnRgkBrHO7rJ3zFjdrVT+SFkvEj7QCpWa6/JAb6lVUsfL7dV8sU24ruf73qXX7F3WtfI2E/pnhYVA2O6jKg==
   dependencies:
     clay-component "^2.5.1"
+    metal-component "^2.16.0"
+    metal-soy "^2.16.0"
+    metal-state "^2.16.0"
+    metal-web-component "^2.16.0"
+
+clay-icon@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/clay-icon/-/clay-icon-2.6.0.tgz#51df532bd52f364d05d4dbe5a0590086db36364d"
+  integrity sha512-oUePtN6Zk8qQmI3Y5ZdVWQrTyk/x/9+N96b2PI3mTA188xDPxrpMpa7WRpseo/PgYJVCREq9kKYHAyo5vW8IJQ==
+  dependencies:
+    clay-component "^2.6.0"
     metal-component "^2.16.0"
     metal-soy "^2.16.0"
     metal-state "^2.16.0"
