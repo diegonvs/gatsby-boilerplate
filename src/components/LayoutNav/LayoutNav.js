@@ -52,6 +52,10 @@ class LayoutNav extends Component {
         }
     }
 
+    expandToggler = () => {
+		this.props.onNavbarToggleClick();
+    }
+
     render() {
         const { fixed = true, opaque = false, effect = false, sidebarHamburguerIcon = false } = this.props;
 

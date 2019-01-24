@@ -94,8 +94,21 @@ export default (props) => (
 		render={data => {
 
 			const logoPath = "/images/home/liferay_logo_black.svg";
+			let navbarClasses = 'sidebar-toggler-content sidenav-fixed sidenav-menu-slider mt-5';
+			if (props.navbarToggled) {
+				navbarClasses += ' toggler-expanded';
+			}
 
 			return (
+				<nav className={navbarClasses} id="clay-sidebar">
+					<SideNavScroll>
+						<div className="sidebar-body mb-auto mt-5">
+							<Search placeholder="Search" />
+
+							<Navigation sectionList={getSection(data)} location={props.location} />
+						</div>
+					</SideNavScroll>
+				</nav>
 			)}
 		}
 	/>
