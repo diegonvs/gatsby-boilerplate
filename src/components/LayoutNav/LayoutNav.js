@@ -53,7 +53,7 @@ class LayoutNav extends Component {
     }
 
     render() {
-        const { fixed = true, opaque = false, effect = false } = this.props;
+        const { fixed = true, opaque = false, effect = false, sidebarHamburguerIcon = false } = this.props;
 
         const styles = classnames('navbar navbar-clay-site navbar-expand-lg navbar-dark', {
             'fixed-top': fixed,
@@ -69,6 +69,15 @@ class LayoutNav extends Component {
                         <span className="title align-middle">{process.env.PROJECT_NAME}</span>
                     </Link>
                     <ul className="navbar-nav ml-auto">
+
+                    {sidebarHamburguerIcon &&
+                        <button onClick={this.expandToggler} className="navbar-toggler p-2 order-md-1" type="button" data-toggle="collapse" data-target="#claySidebar" aria-controls="claySidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
+                                <use xlinkHref="/images/icons/icons.svg#bars" />
+                            </svg>
+                        </button>
+                    }
+
                         <li className="nav-item">
                             <Link className="nav-link ml-3" to="/docs/">Docs</Link>
                         </li>

@@ -52,7 +52,7 @@ export default class Docs extends Component {
                     </Helmet>
 
                     <header>
-                        <LayoutNav effect={true} static={true} />
+                        <LayoutNav effect={true} static={true} sidebarHamburguerIcon={true} onNavbarToggleClick={this.docsNavbarToggleClick} />
                     </header>
                     <main className="content">
                         <Sidebar location={location} />
