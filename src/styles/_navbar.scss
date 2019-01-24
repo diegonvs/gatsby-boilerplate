@@ -10,34 +10,49 @@
 	}
 	.navbar-brand {
 		span {
-			font-size: 30px;
+			font-size: 20px;
 			font-weight: 700;
 			line-height: 1;
+			@include media-breakpoint-up(sm) {
+				font-size: 30px;
+			}
 		}
 	}
-	.navbar-nav .nav-link {
-		font-weight: 700;
+	.navbar-nav {
+		width: 100%;
+
+		@include media-breakpoint-up(md) {
+			width: auto;
+		}
+
+		.nav-link {
+			font-weight: 700;
+		}
 	}
 	.logo {
-		max-height: 40px;
+		max-height: 32px;
+		@include media-breakpoint-up(sm) {
+			max-height: 40px;
+		}
 	}
 }
 
-.navbar-mobile {
-	background-color: $brand-light;
-	left: 0;
-	min-height: $base-size * 2.92;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 100;
-	@media (min-width: $grid-float-breakpoint) {
-		display: none;
-	}
-	.navbar-brand {
-		color: $text-color;
-	}
-	.logo {
-		max-height: 40px;
-	}
-}
+// we removed the old navbar-mobile (grey) because it was under (z-index) the navbar-clay-site (blue)
+// .navbar-mobile {
+// 	background-color: $brand-light;
+// 	left: 0;
+// 	min-height: $base-size * 2.92;
+// 	position: fixed;
+// 	right: 0;
+// 	top: 0;
+// 	z-index: 100;
+// 	@media (min-width: $grid-float-breakpoint) {
+// 		display: none;
+// 	}
+// 	.navbar-brand {
+// 		color: $text-color;
+// 	}
+// 	.logo {
+// 		max-height: 40px;
+// 	}
+// }

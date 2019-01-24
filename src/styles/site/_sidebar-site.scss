@@ -1,6 +1,6 @@
 .sidebar-clay-site {
 	background-color: $brand-light;
-	min-width: 370px;
+	// min-width: 370px; // bug on mobile 320
 
 	.navbar-brand {
 		font-size: $base-size * 1.1666;

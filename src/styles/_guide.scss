@@ -1,6 +1,6 @@
 .docs {
 	header {
-		padding: $base-size / 2 0;
+		// padding: $base-size / 2 0; // we dont' need this padding
 
 		@media (min-width: $grid-float-breakpoint) {
 			padding: $base-size * 2 0 $base-size;
