@@ -3,12 +3,7 @@ import Navigation from './Navigation';
 import React, {Component} from 'react';
 import Search from './Search';
 
-const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
-
-const expandToggler = () => {
-	SidebarRef.current.classList.toggle('toggler-expanded');
-};
 
 const getSection = data => {
 	const elements = data.allMdx.edges.map(({node}) => {
@@ -93,7 +88,6 @@ export default (props) => (
 		`}
 		render={data => {
 
-			const logoPath = "/images/home/liferay_logo_black.svg";
 			let navbarClasses = 'sidebar-toggler-content sidenav-fixed sidenav-menu-slider mt-5';
 			if (props.navbarToggled) {
 				navbarClasses += ' toggler-expanded';
