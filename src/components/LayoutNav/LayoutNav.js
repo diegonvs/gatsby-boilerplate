@@ -52,8 +52,12 @@ class LayoutNav extends Component {
         }
     }
 
+    expandToggler = () => {
+		this.props.onNavbarToggleClick();
+    }
+
     render() {
-        const { fixed = true, opaque = false, effect = false } = this.props;
+        const { fixed = true, opaque = false, effect = false, sidebarHamburguerIcon = false } = this.props;
 
         const styles = classnames('navbar navbar-clay-site navbar-expand-lg navbar-dark', {
             'fixed-top': fixed,
@@ -63,27 +67,36 @@ class LayoutNav extends Component {
 
         return (
             <nav ref="navElement" className={styles}>
-                <div className="container-fluid container-fluid-max-xl">
+                <div className="container-fluid">
                     <Link to="/" className="navbar-brand">
                         <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="" />
                         <span className="title align-middle">{process.env.PROJECT_NAME}</span>
                     </Link>
-                    <ul className="navbar-nav ml-auto">
+
+                    {sidebarHamburguerIcon &&
+                        <button onClick={this.expandToggler} className="navbar-toggler p-2 order-md-1" type="button" data-toggle="collapse" data-target="#claySidebar" aria-controls="claySidebar" aria-expanded="false" aria-label="Toggle navigation">
+                            <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
+                                <use xlinkHref="/images/icons/icons.svg#bars" />
+                            </svg>
+                        </button>
+                    }
+
+                    <ul className="navbar-nav ml-md-auto">
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/docs/">Docs</Link>
+                            <Link className="nav-link ml-lg-3" to="/docs/">Docs</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/blog/">Blog</Link>
+                            <Link className="nav-link ml-lg-3" to="/blog/">Blog</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/onboarding/">Onboarding</Link>
+                            <Link className="nav-link ml-lg-3" to="/onboarding/">Onboarding</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link ml-3" to="/updates/">Updates</Link>
+                            <Link className="nav-link ml-lg-3" to="/updates/">Updates</Link>
                         </li>
                         {isLoggedIn() ? (
                             <li className="nav-item">
-                                <Link className="nav-link ml-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
+                                <Link className="nav-link ml-lg-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
                             </li>
                         ) : ''}
                         <li className="nav-item">

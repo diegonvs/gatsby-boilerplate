@@ -3,7 +3,7 @@
 	flex-direction: column;
 	min-height: 100vh;
 
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(lg) {
 		margin-left: $sidebar-width;
 	}
 
@@ -26,11 +26,7 @@
 .sidenav-menu-slider .sidenav-menu {
 	width: 100%;
 
-	@media (min-width: $grid-float-breakpoint) {
-		width: $sidebar-width - 100px;
-	}
-
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(lg) {
 		width: $sidebar-width;
 	}
 }
@@ -43,15 +39,11 @@
 	}
 
 	&, &.toggler-expanded {
-		@media (max-width: $grid-float-breakpoint - 1) {
+		@include media-breakpoint-down(lg) {
 			transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 
-		@media (min-width: $grid-float-breakpoint) {
-			width: $sidebar-width - 100px;
-		}
-
-		@media (min-width: $screen-sm) {
+		@include media-breakpoint-up(lg) {
 			width: $sidebar-width;
 		}
 	}
@@ -60,10 +52,14 @@
 .sidenav-fixed.sidenav-menu-slider .sidenav-menu {
 	bottom: 0;
 	height: initial;
-	top: $base-size * 2.9;
+	top: 75px;
 
-	@media (min-width: $grid-float-breakpoint) {
-		top: 0;
+	@include media-breakpoint-up(md) {
+		top: 35px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		top: 0
 	}
 }
 
