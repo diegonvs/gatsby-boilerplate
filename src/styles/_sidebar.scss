@@ -52,10 +52,14 @@
 .sidenav-fixed.sidenav-menu-slider .sidenav-menu {
 	bottom: 0;
 	height: initial;
-	top: $base-size * 2.9;
+	top: 75px;
 
-	@media (min-width: $grid-float-breakpoint) {
-		top: 0;
+	@include media-breakpoint-up(md) {
+		top: 35px;
+	}
+
+	@include media-breakpoint-up(lg) {
+		top: 0
 	}
 }
 
