@@ -21,7 +21,7 @@ const SimpleFooter = (props) => {
                         </li>
                         <li>
                             <a className="rounded-circle sticker sticker-secondary" href={`${editContentURL}/${slug.replace("html", "md")}`} target="_blank" rel="noopener noreferrer">
-                                <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="" />
+                                <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="Github Logo" />
                             </a>
                         </li>
                     </ul>

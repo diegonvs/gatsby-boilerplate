@@ -19,7 +19,7 @@ class Index extends Component {
     }
 
     render() {
-        const description = "Start using Gatsby for make powerful static sites 💖";
+        const description = "Start using Gatsby for make powerful static sites";
 
         return (
             <div className="home">
@@ -57,7 +57,7 @@ class Index extends Component {
                             <div className="row">
                                 <div className="col-md-4 ml-auto mr-lg-4 wow zoomIn" data-wow-duration="1.2s">
                                     <div className="text-center text-lg-right">
-                                        <img src="/images/home/github.svg" alt="" />
+                                        <img src="/images/home/github.svg" alt="Github Logo" />
                                     </div>
                                 </div>
                                 <div className="col-md-6 mr-auto wow zoomIn" data-wow-duration="0.8s">
