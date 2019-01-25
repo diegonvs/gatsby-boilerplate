@@ -69,7 +69,7 @@ class LayoutNav extends Component {
             <nav ref="navElement" className={styles}>
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand">
-                        <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="" />
+                        <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="Liferay Logo" />
                         <span className="title align-middle">{process.env.PROJECT_NAME}</span>
                     </Link>
 
