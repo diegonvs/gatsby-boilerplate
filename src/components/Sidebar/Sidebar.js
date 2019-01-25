@@ -3,12 +3,7 @@ import Navigation from './Navigation';
 import React, {Component} from 'react';
 import Search from './Search';
 
-const SidebarRef = React.createRef();
 const SideNavRef = React.createRef();
-
-const expandToggler = () => {
-	SidebarRef.current.classList.toggle('toggler-expanded');
-};
 
 const getSection = data => {
 	const elements = data.allMdx.edges.map(({node}) => {
@@ -93,37 +88,21 @@ export default (props) => (
 		`}
 		render={data => {
 
-			const logoPath = "/images/home/liferay_logo_black.svg";
+			let navbarClasses = 'sidebar-toggler-content sidenav-fixed sidenav-menu-slider mt-5';
+			if (props.navbarToggled) {
+				navbarClasses += ' toggler-expanded';
+			}
 
 			return (
-				<>
-					<div className="navbar navbar-mobile navbar-expand-lg navbar-header">
-						<Link to="/" className="navbar-brand d-flex">
-							<img className="logo mr-2" src={logoPath} alt="" />
-							<span className="title h1 font-weight-bold mb-0 p-1">{process.env.PROJECT_NAME}</span>
-						</Link>
+				<nav className={navbarClasses} id="clay-sidebar">
+					<SideNavScroll>
+						<div className="sidebar-body mb-auto mt-5">
+							<Search placeholder="Search" />
 
-						<button onClick={expandToggler} className="navbar-toggler sidebar-toggler p-3" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-								<use xlinkHref="/images/icons/icons.svg#bars" />
-							</svg>
-						</button>
-					</div>
-
-					<nav
-						ref={SidebarRef}
-						className="sidebar-toggler-content sidenav-fixed sidenav-menu-slider mt-5"
-						id="clay-sidebar"
-					>
-						<SideNavScroll>
-							<div className="sidebar-body mb-auto mt-5">
-								<Search placeholder="Search" />
-
-								<Navigation sectionList={getSection(data)} location={props.location} />
-							</div>
-						</SideNavScroll>
-					</nav>
-				</>
+							<Navigation sectionList={getSection(data)} location={props.location} />
+						</div>
+					</SideNavScroll>
+				</nav>
 			)}
 		}
 	/>

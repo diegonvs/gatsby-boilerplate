@@ -13,6 +13,13 @@ import Auth from '../components/Auth';
 import { logout } from '../services/auth';
 
 export default class Docs extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            navbarToggled: false
+		}
+    }
+
     componentDidMount() {
         this._codeTabs = new CodeTabs();
         this._codeClipboard = new CodeClipboard();
@@ -27,6 +34,12 @@ export default class Docs extends Component {
         logout().then(() => {
             this.forceUpdate();
         });
+    }
+
+    docsNavbarToggleClick() {
+        this.setState(prevState => ({
+            navbarToggled: !prevState.navbarToggled
+        }));
     }
 
     render() {
@@ -52,10 +65,10 @@ export default class Docs extends Component {
                     </Helmet>
 
                     <header>
-                        <LayoutNav effect={true} static={true} />
+                        <LayoutNav effect={true} static={true} sidebarHamburguerIcon={true} onNavbarToggleClick={this.docsNavbarToggleClick.bind(this)} />
                     </header>
                     <main className="content">
-                        <Sidebar location={location} />
+                        <Sidebar location={location} navbarToggled={this.state.navbarToggled} />
                         <div className="sidebar-offset">
                             <header>
                                 <div className="clay-site-container container-fluid">

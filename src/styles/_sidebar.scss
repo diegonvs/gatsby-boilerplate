@@ -26,11 +26,7 @@
 .sidenav-menu-slider .sidenav-menu {
 	width: 100%;
 
-	@media (min-width: $grid-float-breakpoint) {
-		width: $sidebar-width - 100px;
-	}
-
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(lg) {
 		width: $sidebar-width;
 	}
 }
@@ -47,11 +43,7 @@
 			transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 
-		@media (min-width: $grid-float-breakpoint) {
-			width: $sidebar-width - 100px;
-		}
-
-		@media (min-width: $screen-sm) {
+		@include media-breakpoint-up(lg) {
 			width: $sidebar-width;
 		}
 	}
