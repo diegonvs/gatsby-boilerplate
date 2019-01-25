@@ -1,4 +1,4 @@
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Navigation from './Navigation';
 import React, {Component} from 'react';
 import Search from './Search';

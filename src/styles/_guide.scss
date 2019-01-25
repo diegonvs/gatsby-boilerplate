@@ -1,13 +1,11 @@
 .docs {
 	header {
-		padding: $base-size / 2 0;
+		h1 {
+			font-size: $base-size * 1.5;
+		}
 
 		@media (min-width: $grid-float-breakpoint) {
 			padding: $base-size * 2 0 $base-size;
-		}
-
-		h1 {
-			font-size: $base-size * 1.5;
 		}
 	}
 

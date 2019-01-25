@@ -3,7 +3,7 @@
 	flex-direction: column;
 	min-height: 100vh;
 
-	@media (min-width: $screen-sm) {
+	@include media-breakpoint-up(lg) {
 		margin-left: $sidebar-width;
 	}
 
@@ -39,7 +39,7 @@
 	}
 
 	&, &.toggler-expanded {
-		@media (max-width: $grid-float-breakpoint - 1) {
+		@include media-breakpoint-down(lg) {
 			transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 		}
 
