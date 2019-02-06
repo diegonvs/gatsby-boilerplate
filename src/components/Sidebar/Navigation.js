@@ -14,19 +14,15 @@ class Navigation extends Component {
     }
 
     _isActive(section) {
-        if (section.alwaysActive) {
-            return true;
-        }
-
         const { location } = this.props;
-        const match = location.pathname.split('/');
-        const id = match[match.length - 1].split('.');
 
-        if (section.items) {
-            return match.includes(section.id);
+        const sectionLocation = location.pathname.split('.')[0];
+
+        if (!section.link) {
+            return sectionLocation.includes(section.id);
         }
 
-        return id[0] === section.id;
+        return sectionLocation.includes(section.link.split('/index')[0]);
     }
 
     renderNavigationItems() {
