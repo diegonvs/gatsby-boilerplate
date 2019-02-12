@@ -2983,21 +2983,21 @@ clay-button@^2.7.0:
     metal-state "^2.16.0"
     metal-web-component "^2.16.0"
 
-clay-charts-shared@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/clay-charts-shared/-/clay-charts-shared-2.6.0.tgz#4f72883cf6bfb023e9072d052ff1affaa152fb42"
-  integrity sha512-yuKwgVSxdGmmXa42Izyrty2Ozb/AK1VikkHHSK6Nc8+QagvM597s8E3chtAE3sxYHnDKUNzDELu8FQ63LSupkg==
+clay-charts-shared@^2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/clay-charts-shared/-/clay-charts-shared-2.8.3.tgz#504dd8567a3bb805713416b7d13d1a842e5676b1"
+  integrity sha512-nLb4o3rTWJuiOVo4jMeXoMCt/cRyarTPQwDlnfWXciUlXk4OFjZRANZowSJFuFBUztu+BGT9sZl094Oyp0K0Rg==
   dependencies:
     d3 "^5.7.0"
     metal "^2.16.6"
 
-clay-charts@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.6.0.tgz#6c6b6a2033e8a8cb27e86574cb639eeeb0ef5c3c"
-  integrity sha512-IT7VHYpJGeugyXa5kfpjoATxnMIj7SWHZMjbcRy9OqHbSrbeRy6bkVd2WHCG9733w1ZB9cmsXqEPgJESUvmiBA==
+clay-charts@2.8.3:
+  version "2.8.3"
+  resolved "https://registry.yarnpkg.com/clay-charts/-/clay-charts-2.8.3.tgz#91f317b72ebceda73ea8ef6a1b07475f924d7795"
+  integrity sha512-mHOFBbk+vFS6/bWeUEd/xG0Hvl2i8Mc/5E/x9YPgUQIQ/OJtyG/x6FkkKYSQyydPbn4co8cOoRnTLWZh3r053Q==
   dependencies:
     billboard.js "1.5.1"
-    clay-charts-shared "^2.6.0"
+    clay-charts-shared "^2.8.3"
     d3 "5.0.0"
     metal "^2.16.2"
     metal-component "^2.13.2"
