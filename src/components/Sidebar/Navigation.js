@@ -18,11 +18,11 @@ class Navigation extends Component {
 
         const sectionLocation = location.pathname.split('.')[0];
 
-        if (!section.link) {
+        if (section.isFolder) {
             return sectionLocation.includes(section.id);
         }
 
-        return sectionLocation.includes(section.link.split('/index')[0]);
+        return sectionLocation === section.link;
     }
 
     renderNavigationItems() {
