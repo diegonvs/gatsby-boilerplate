@@ -13,11 +13,11 @@ If you want to check the documentation 📚 click on this [link](https://github.
 
 # Setup
 
-0. Clone this repo or use Gatsby command line interface using `gatsby new [your_site] https://github.com/diegonvs/gatsby-boilerplate`
-1. Run `npm install` or `yarn`
-2. Run `npm run develop` or `yarn develop` for development mode
-3. Run `npm run build` or `yarn build` for production mode
-3.1 If you want serve your production build just run `npm run serve` or `yarn serve`
+0. Clone this repo or use Gatsby command line interface using `gatsby new [your_site] https://github.com/diegonvs/gatsby-boilerplate` or `git clone https://github.com/diegonvs/gatsby-boilerplate.git`
+1. Make sure that you have [yarn](https://yarnpkg.com/en/) installed
+2. Navigate to project folder and run `yarn`
+3. Run `npm run develop` or `yarn develop` for development mode or run `npm run build` or `yarn build` for production mode
+4. If you want serve your production build just run `npm run serve` or `yarn serve`
 
 ## License
 
