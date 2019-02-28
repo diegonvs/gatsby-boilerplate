@@ -923,7 +923,7 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@gfx/zopfli@^1.0.8":
+"@gfx/zopfli@^1.0.10":
   version "1.0.11"
   resolved "https://registry.yarnpkg.com/@gfx/zopfli/-/zopfli-1.0.11.tgz#6ced06b4566a5feb0036fe6a1e0262ce6cb1d6c5"
   integrity sha512-wW+hi+bqdYCpBIvL8g7RYub9YXf5crhZK9SNk/VZmbF177Em1VwFv488qyh8iBpCo6GptcP1Zam0bJfY3VmMbg==
@@ -5425,12 +5425,12 @@ gatsby-plugin-sass@2.0.8:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-zopfli@1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-1.0.2.tgz#3a0736d19d3de4164e93cbf56448c501e7480726"
-  integrity sha512-VFzXV09s29/9uQ2lfnNII4vQemxeRRIOlYaJCivJIlZM6AC5XP/qb8jlWe23rZcafTOJAANlagALzqPgU79/Jg==
+gatsby-plugin-zopfli@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-1.0.3.tgz#4e130f9b1df5e68f9423138e8b7075fc9390e533"
+  integrity sha512-+oY8UbGDtQrfDWzu1hp3wNyiWyGM5O02qS2bRDDyvKbjO2tOTKY+08Gc++dYSgKWOZCHzOpz7I8JrwZysHMVSA==
   dependencies:
-    "@gfx/zopfli" "^1.0.8"
+    "@gfx/zopfli" "^1.0.10"
 
 gatsby-react-router-scroll@^2.0.3:
   version "2.0.4"
