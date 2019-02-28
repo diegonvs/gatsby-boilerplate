@@ -5425,10 +5425,10 @@ gatsby-plugin-sass@2.0.8:
     "@babel/runtime" "^7.0.0"
     sass-loader "^7.0.1"
 
-gatsby-plugin-zopfli@1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-1.0.3.tgz#4e130f9b1df5e68f9423138e8b7075fc9390e533"
-  integrity sha512-+oY8UbGDtQrfDWzu1hp3wNyiWyGM5O02qS2bRDDyvKbjO2tOTKY+08Gc++dYSgKWOZCHzOpz7I8JrwZysHMVSA==
+gatsby-plugin-zopfli@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-zopfli/-/gatsby-plugin-zopfli-1.0.4.tgz#e146d58f38478d83d6ae669e819fab64d8ff4fae"
+  integrity sha512-PEzsItwoygQpeOPgb/X7Dol+PuBMX9w0HOJnzPJh2/d0VpiYZA1emEaY9roQDKY0shyd0+4xSg+4TmhpqhlJ0Q==
   dependencies:
     "@gfx/zopfli" "^1.0.10"
 
