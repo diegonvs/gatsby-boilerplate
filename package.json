@@ -28,7 +28,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
-    "@mdx-js/mdx": "0.15.7",
+    "@mdx-js/mdx": "0.20.1",
     "@mdx-js/tag": "0.18.0",
     "browser-monads": "1.0.0",
     "classnames": "2.2.6",
