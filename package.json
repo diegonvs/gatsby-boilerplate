@@ -65,7 +65,7 @@
   },
   "devDependencies": {
     "gh-pages": "2.0.1",
-    "globby": "9.0.0",
+    "globby": "9.1.0",
     "rimraf": "2.6.3"
   }
 }
