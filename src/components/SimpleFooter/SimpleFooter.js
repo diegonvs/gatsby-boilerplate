@@ -1,4 +1,5 @@
 import React from 'react';
+import { withPrefix } from 'gatsby';
 
 const SimpleFooter = (props) => {
 
@@ -15,13 +16,13 @@ const SimpleFooter = (props) => {
                         <li className="mr-2">
                             <a className="rounded-circle sticker sticker-secondary" href={issuesURL} target="_blank" rel="noopener noreferrer">
                                 <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-                                    <use xlinkHref="/images/icons/icons.svg#comments" />
+                                    <use xlinkHref={withPrefix("images/icons/icons.svg#comments")} />
                                 </svg>
                             </a>
                         </li>
                         <li>
                             <a className="rounded-circle sticker sticker-secondary" href={`${editContentURL}/${slug.replace("html", "md")}`} target="_blank" rel="noopener noreferrer">
-                                <img className="lexicon-icon" src="/images/home/GitHub-Mark-64px.svg" alt="Github Logo" />
+                                <img className="lexicon-icon" src={withPrefix("images/home/GitHub-Mark-64px.svg")} alt="Github Logo" />
                             </a>
                         </li>
                     </ul>

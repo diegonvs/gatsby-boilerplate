@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withPrefix } from 'gatsby';
 
 class HTML extends Component {
     render() {
@@ -11,11 +12,11 @@ class HTML extends Component {
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                     />
-                    <link rel="shortcut icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="16x16 32x32" />
-                    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
-                    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png" />
-                    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
-                    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#0b5fff" />
+                    <link rel="shortcut icon" type="image/png" href={withPrefix("favicons/favicon-32x32.png")} sizes="16x16 32x32" />
+                    <link rel="apple-touch-icon" sizes="180x180" href={withPrefix("favicons/apple-touch-icon.png")} />
+                    <link rel="icon" type="image/png" sizes="32x32" href={withPrefix("favicons/favicon-32x32.png")} />
+                    <link rel="icon" type="image/png" sizes="16x16" href={withPrefix("favicons/favicon-16x16.png")} />
+                    <link rel="mask-icon" href={withPrefix("/favicons/safari-pinned-tab.svg")} color="#0b5fff" />
                     <meta name="msapplication-TileColor" content="#ffffff" />
                     <meta name="theme-color" content="#ffffff" />
                     {this.props.headComponents}

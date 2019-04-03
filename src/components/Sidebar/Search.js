@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withPrefix } from 'gatsby';
 
 const apiKey = process.env.ALGOLIA_API_KEY;
 
@@ -47,7 +48,7 @@ class Search extends Component {
 							/>
 							<span className="input-group-addon">
 								<svg className="lexicon-icon">
-									<use xlinkHref="/images/icons/icons.svg#search" />
+									<use xlinkHref={withPrefix("images/icons/icons.svg#search")} />
 								</svg>
 							</span>
 						</div>

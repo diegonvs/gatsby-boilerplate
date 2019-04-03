@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 
 class Navigation extends Component {
     _handleOnClick(index, depth, section, event) {
@@ -61,7 +61,7 @@ const Anchor = ({page}) => {
             <a className="align-middle" href="#no">
                 <span>{page.title}</span>
                 <svg className="collapse-toggle clay-icon icon-monospaced">
-                    <use xlinkHref="/images/icons/icons.svg#caret-bottom" />
+                    <use xlinkHref={withPrefix("images/icons/icons.svg#caret-bottom")} />
                 </svg>
             </a>
         );
