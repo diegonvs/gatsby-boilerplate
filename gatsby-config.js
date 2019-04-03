@@ -2,6 +2,7 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
+	pathPrefix: '/gatsby-boilerplate',
 	plugins: [
 		'gatsby-plugin-meta-redirect',
 		{
@@ -69,12 +70,12 @@ module.exports = {
 				display: 'minimal-ui',
 				icons: [
 					{
-						"src": "/favicons/android-chrome-192x192.png",
+						"src": "favicons/android-chrome-192x192.png",
 						"sizes": "192x192",
 						"type": "image/png"
 					},
 					{
-						"src": "/favicons/android-chrome-512x512.png",
+						"src": "favicons/android-chrome-512x512.png",
 						"sizes": "512x512",
 						"type": "image/png"
 					}

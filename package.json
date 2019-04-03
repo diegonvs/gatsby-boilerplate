@@ -21,7 +21,7 @@
   },
   "scripts": {
     "dev": "rimraf public .cache && gatsby develop",
-    "deploy": "gatsby build && gh-pages -d public -b wedeploy",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "develop": "rimraf public .cache && gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build",

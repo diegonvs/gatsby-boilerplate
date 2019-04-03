@@ -1,6 +1,6 @@
 import { window, document } from 'browser-monads';
 import React, { Component } from 'react';
-import { Link } from "gatsby";
+import { Link, withPrefix } from 'gatsby';
 import classnames from 'classnames';
 
 import { isLoggedIn, logout } from '../../services/auth';
@@ -69,14 +69,14 @@ class LayoutNav extends Component {
             <nav ref="navElement" className={styles}>
                 <div className="container-fluid">
                     <Link to="/" className="navbar-brand">
-                        <img className="logo mr-2" src="/images/home/liferay_logo.svg" alt="Liferay Logo" />
+                        <img className="logo mr-2" src={withPrefix("/images/home/liferay_logo.svg")} alt="Liferay Logo" />
                         <span className="title align-middle">{process.env.PROJECT_NAME}</span>
                     </Link>
 
                     {sidebarHamburguerIcon &&
                         <button onClick={this.expandToggler} className="navbar-toggler p-2 order-md-1" type="button" data-toggle="collapse" data-target="#claySidebar" aria-controls="claySidebar" aria-expanded="false" aria-label="Toggle navigation">
                             <svg aria-hidden="true" className="lexicon-icon lexicon-icon-bars">
-                                <use xlinkHref="/images/icons/icons.svg#bars" />
+                                <use xlinkHref={withPrefix("images/icons/icons.svg#bars")} />
                             </svg>
                         </button>
                     }
@@ -101,7 +101,7 @@ class LayoutNav extends Component {
                         ) : ''}
                         <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href={process.env.GITHUB_REPO}  target="_blank" rel="noopener noreferrer">
-                                <img src="/images/home/GitHub-Mark-64px.svg" alt="" />
+                                <img src={withPrefix("/images/home/GitHub-Mark-64px.svg")} alt="" />
                             </a>
                         </li>
                     </ul>

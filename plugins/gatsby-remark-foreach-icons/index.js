@@ -3,6 +3,7 @@ const {resolve} = require('path');
 const countries = require('countries-list').countries;
 const globby = require('globby');
 const langs = require('languages');
+const { pathPrefix } = require('../../gatsby-config');
 
 const alternateCodes = {
 	'in': 'id',
@@ -13,7 +14,7 @@ const alternateCodes = {
 function replaceValue(array) {
 	const htmlValue = array.map(item => `<li>
         <svg class="lexicon-icon lexicon-icon-${item.icon}">
-            <use xlink:href="/images/icons/icons.svg#${item.icon}" />
+            <use xlink:href="${pathPrefix}/images/icons/icons.svg#${item.icon}" />
         </svg>
         <span>${item.name}</span>
     </li>`);
