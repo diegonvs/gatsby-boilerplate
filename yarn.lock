@@ -2902,10 +2902,10 @@ clay-component@2.9.0:
     metal-dom "^2.16.0"
     metal-state "^2.16.0"
 
-clay-css@2.12.0:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.12.0.tgz#984163b32848a17691a76b99cdeaa3aef5653c5c"
-  integrity sha512-Jwh7oiZ3VSvJPC0OMXwfJe1IBUkaD/w5IOtLkkv+4E8z8JXG7m4C+iACxJxunJsPxnC66SgWt9Lq2RbZUvv87w==
+clay-css@2.12.1:
+  version "2.12.1"
+  resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.12.1.tgz#5b67ead1dd334c0a50b8658ab342d300dd956f41"
+  integrity sha512-qpYMacnXS1VInedk8VkH5gVRXB6dsgKL+wUKenkSfnE+if66h4AWCk4ao90S2gD2C6TMfk4bSJxDTgk/Z7guSw==
 
 clay-tooltip@2.9.0:
   version "2.9.0"
