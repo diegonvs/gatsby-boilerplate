@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Link, withPrefix } from 'gatsby';
 import classnames from 'classnames';
 
-import { isLoggedIn, logout } from '../../services/auth';
+import Login from '../Login';
 
 class LayoutNav extends Component {
     constructor() {
@@ -27,17 +27,6 @@ class LayoutNav extends Component {
         } else {
             this.refs.navElement.classList.remove('scroll');
         }
-    }
-
-    _handleLogout() {
-        logout()
-            .then(() => {
-                this.forceUpdate();
-            })
-            .catch((error) => {
-                alert(error);
-                window.location.reload();
-            });
     }
 
     componentDidMount() {
@@ -94,11 +83,9 @@ class LayoutNav extends Component {
                         <li className="nav-item">
                             <Link className="nav-link ml-lg-3" to="/updates/">Updates</Link>
                         </li>
-                        {isLoggedIn() ? (
-                            <li className="nav-item">
-                                <Link className="nav-link ml-lg-3" to="#" onClick={this._handleLogout.bind(this)}>Logout</Link>
-                            </li>
-                        ) : ''}
+                        <li className="nav-item">
+                            <Login />
+                        </li>
                         <li className="nav-item">
                             <a className="mx-3 mr-lg-0" href={process.env.GITHUB_REPO}  target="_blank" rel="noopener noreferrer">
                                 <img src={withPrefix("/images/home/GitHub-Mark-64px.svg")} alt="" />
