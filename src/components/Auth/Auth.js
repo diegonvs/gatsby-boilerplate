@@ -1,32 +1,16 @@
 import React, { Component } from 'react';
-import { isLoggedIn } from '../../services/auth';
-import Login from '../Login';
+import { navigate } from 'gatsby';
+import {handleLogin, isBrowser, isLoggedIn} from '../../services/auth';
 
 class Auth extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            login: false,
-        }
-    }
-
-    changeLoginState(isLogged) {
-        this.setState(() => ({
-            login: isLogged
-        }));
-    }
-
-    componentDidMount() {
-        this.setState({
-            login: !!isLoggedIn()
-        })
-    }
-
     render() {
-        if (this.props.needsAuth && !this.state.login) {
-            return (
-                <Login changeLoginState={this.changeLoginState.bind(this)} />
-            );
+        if (this.props.needsAuth && !isLoggedIn()) {
+            handleLogin().then(() => {
+                if(isBrowser()) {
+                    navigate(window.location.pathname);
+                }
+            });
+            return null;
         }
 
         return this.props.children;

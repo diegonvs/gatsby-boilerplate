@@ -1,60 +1,34 @@
-import WeDeploy from 'wedeploy/build/browser/api-min';
-import { Nothing } from 'nothing-mock';
+import netlifyIdentity from 'netlify-identity-widget';
 
 export const isBrowser = () => typeof window !== "undefined"
 
-export const getUser = () =>
-    isBrowser() && window.localStorage.getItem("gatsbyUser")
-        ? JSON.parse(window.localStorage.getItem("gatsbyUser"))
-        : {};
-
-const setUser = user => window.localStorage.setItem("gatsbyUser", JSON.stringify(user));
-
-const auth = isBrowser() ? WeDeploy.auth(process.env.WEDEPLOY_AUTH_SERVICE_URL).auth(process.env.WEDEPLOY_MASTER_TOKEN) : Nothing;
-
-export const handleLogin = ({ email, password }) => {
-    if (!isLoggedIn()) {
-        return new Promise((resolve, reject) => {
-            auth.signInWithEmailAndPassword(email, password)
-            .then(({ data_: { createdAt, email, id, token } }) => {
-                setUser({
-                    createdAt: createdAt,
-                    email: email,
-                    id: id,
-                    token: token,
-                });
+// handle login & signup
+export const handleLogin = () => {
+    return new Promise((resolve, reject) => {
+        if (isLoggedIn()) {
+            resolve();
+        } else {
+            netlifyIdentity.open();
+            netlifyIdentity.on('login', user => {
+                netlifyIdentity.close();
                 resolve();
-            })
-            .catch((e) => {
-                reject(alert(e.error_description));
             });
-        })
-    }
-}
-
-export const handleSignUp = ({email, password}) => {
-    if (!isLoggedIn()) {
-        return new Promise((resolve, reject) => {
-            auth.createUser({
-                email: email,
-                password: password
-            })
-            .then((user) => {
-                resolve();
-            })
-            .catch((err) => {
-                reject(alert(err));
-            });
+        }
+        netlifyIdentity.on('error', err => {
+            reject(err);
         });
-    }
+    });
 }
 
 export const isLoggedIn = () => {
-    return !!auth.currentUser;
+    return !!netlifyIdentity.currentUser();
 }
 
 export const logout = () => {
-    setUser({});
-    return auth
-        .signOut();
+    return new Promise((resolve, reject) => {
+        netlifyIdentity.logout();
+        netlifyIdentity.on('logout', () => {
+            resolve();
+        });
+    });
 }
