@@ -2,7 +2,7 @@ const clay = require('clay-css');
 const path = require('path');
 
 module.exports = {
-	pathPrefix: '/gatsby-boilerplate',
+	// pathPrefix: '/gatsby-boilerplate',
 	plugins: [
 		'gatsby-plugin-meta-redirect',
 		{
@@ -35,9 +35,6 @@ module.exports = {
 						resolve: path.resolve(__dirname, './plugins/gatsby-remark-code-label-extractor'),
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-foreach-icons'),
-					},
-					{
 						resolve: 'gatsby-remark-prismjs',
 						pluginOptions: {
 							classPrefix: 'gatsby-code-',
@@ -45,9 +42,6 @@ module.exports = {
 					},
 					{
 						resolve: path.resolve(__dirname, './plugins/gatsby-remark-use-clipboard'),
-					},
-					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-api-table'),
 					},
 				],
 			},
