@@ -1,11 +1,11 @@
 import { window, document } from 'browser-monads';
-import React, { Component } from 'react';
+import React from 'react';
 import { Link, withPrefix } from 'gatsby';
 import classnames from 'classnames';
 
 import Login from '../Login';
 
-class LayoutNav extends Component {
+class LayoutNav extends React.Component {
     constructor() {
         super();
         this._rootNode = window || document;

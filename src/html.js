@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withPrefix } from 'gatsby';
 
-class HTML extends Component {
+class HTML extends React.Component {
     render() {
         return(
             <html lang="en">

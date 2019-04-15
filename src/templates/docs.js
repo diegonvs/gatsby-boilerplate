@@ -1,7 +1,7 @@
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import React, { Component } from 'react';
+import React from 'react';
 
 import SimpleFooter from '../components/SimpleFooter';
 import Sidebar from '../components/Sidebar';
@@ -12,7 +12,7 @@ import Typography from '../components/Typography';
 import Auth from '../components/Auth';
 import { logout } from '../services/auth';
 
-export default class Docs extends Component {
+export default class Docs extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

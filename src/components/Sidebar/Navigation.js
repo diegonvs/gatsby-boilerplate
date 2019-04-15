@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 import { Link, withPrefix } from "gatsby"
 
-class Navigation extends Component {
+class Navigation extends React.Component {
     _handleOnClick(index, depth, section, event) {
         event.stopPropagation();
 

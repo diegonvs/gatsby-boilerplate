@@ -1,10 +1,10 @@
 import { window } from 'browser-monads';
 import { Link, StaticQuery, withPrefix, graphql } from 'gatsby';
-import React, { Component } from 'react';
+import React from 'react';
 import CodeTabs from '../../CodeTabs';
 import CodeClipboard from '../../CodeClipboard';
 
-class BlogList extends Component {
+class BlogList extends React.Component {
     componentDidMount() {
         this._codeTabs = new CodeTabs();
         this._codeClipboard = new CodeClipboard();

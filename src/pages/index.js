@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import { withPrefix, Link } from 'gatsby';
 import LayoutNav from '../components/LayoutNav';
@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 /**
  * Index page
  */
-class Index extends Component {
+class Index extends React.Component {
     componentDidMount() {
         this._wow = new WOW();
         this._wow.init();

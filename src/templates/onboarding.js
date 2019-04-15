@@ -1,5 +1,5 @@
 import { Link, graphql } from 'gatsby';
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import MultiStepNav from '../components/Onboarding/MultiStepNav';
@@ -12,7 +12,7 @@ import LayoutNav from '../components/LayoutNav';
 import Auth from '../components/Auth';
 
 
-export default class Onboarding extends Component {
+export default class Onboarding extends React.Component {
     componentDidMount() {
         this._codeTabs = new CodeTabs();
         this._codeClipboard = new CodeClipboard();

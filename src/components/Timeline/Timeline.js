@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { withPrefix } from 'gatsby';
 
-class Timeline extends Component {
+class Timeline extends React.Component {
     _compareVersions(a, b) {
         if (a.version < b.version)
             return 1;

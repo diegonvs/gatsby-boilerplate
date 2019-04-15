@@ -1,12 +1,12 @@
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import React, { Component } from 'react';
+import React from 'react';
 import Footer from '../components/Footer';
 import LayoutNav from '../components/LayoutNav';
 import Auth from '../components/Auth';
 import Timeline from '../components/Timeline';
 
-export default class Updates extends Component {
+export default class Updates extends React.Component {
     render() {
         const { data } = this.props;
         const { mdx: { frontmatter: { title, needsAuth, updates }, excerpt, timeToRead } } = data;

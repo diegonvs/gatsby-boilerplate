@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { withPrefix } from 'gatsby';
 
 const apiKey = process.env.ALGOLIA_API_KEY;
@@ -7,7 +7,7 @@ const indexName = process.env.ALGOLIA_INDEX_NAME;
 
 const isProduction = process.env.NODE_ENV === 'production' ? true : false;
 
-class Search extends Component {
+class Search extends React.Component {
 	state = {
 		disabled: false
 	};

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import { Link, withPrefix } from 'gatsby';
 import Typography from '../../Typography';
 
-export default class BlogArticle extends Component {
+export default class BlogArticle extends React.Component {
 
     render() {
         return (

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import BlogList from '../BlogList';
 
-export default class BlogMain extends Component {
+export default class BlogMain extends React.Component {
     render() {
         return (
             <>

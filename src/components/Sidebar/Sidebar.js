@@ -1,6 +1,6 @@
 import { StaticQuery, graphql } from 'gatsby';
 import Navigation from './Navigation';
-import React, {Component} from 'react';
+import React from 'react';
 import Search from './Search';
 
 const SideNavRef = React.createRef();
@@ -45,7 +45,7 @@ const toSectionItem = (item, paths) => {
 
 let scrollTop = 0;
 
-class SideNavScroll extends Component {
+class SideNavScroll extends React.Component {
 	onScroll(event) {
 		scrollTop = event.currentTarget.scrollTop;
 	}

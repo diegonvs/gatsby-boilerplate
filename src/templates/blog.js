@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
-import React, { Component } from 'react';
+import React from 'react';
 import Footer from '../components/Footer';
 import CodeTabs from '../components/CodeTabs';
 import CodeClipboard from '../components/CodeClipboard';
@@ -9,7 +9,7 @@ import BlogArticle from '../components/Blog/BlogArticle';
 import LayoutNav from '../components/LayoutNav';
 import Auth from '../components/Auth';
 
-export default class Blog extends Component {
+export default class Blog extends React.Component {
     componentDidMount() {
         this._codeTabs = new CodeTabs();
         this._codeClipboard = new CodeClipboard();

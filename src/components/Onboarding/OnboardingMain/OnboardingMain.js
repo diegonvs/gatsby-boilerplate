@@ -1,9 +1,9 @@
 import { Link } from 'gatsby';
-import React, { Component } from 'react';
+import React from 'react';
 import MDXRenderer from 'gatsby-mdx/mdx-renderer';
 import Typography from '../../Typography';
 
-export default class OnboardingMain extends Component {
+export default class OnboardingMain extends React.Component {
     render() {
         return (
             <div className="onboarding-main">

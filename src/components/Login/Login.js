@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { handleLogin, handleSignUp, logout, isLoggedIn, isBrowser } from '../../services/auth'
 import { navigate } from 'gatsby';
 
-class Login extends Component {
+class Login extends React.Component {
 
     constructor(props) {
         super(props);
