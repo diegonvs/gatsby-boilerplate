@@ -9,8 +9,7 @@ module.exports = ({actions, stage}) => {
 				{
 					test: [
 						path.resolve(__dirname, '../node_modules/wowjs'),
-						path.resolve(__dirname, '../node_modules/metal-clipboard'),
-						path.resolve(__dirname, '../node_modules/wedeploy')
+						path.resolve(__dirname, '../node_modules/metal-clipboard')
 					],
 					loader: 'null-loader',
 				},
