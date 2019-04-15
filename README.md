@@ -1,5 +1,6 @@
 # Gatsby Boilerplate 🚀
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b74320ce-91d2-42b8-98a2-3ad79f900adf/deploy-status)](https://app.netlify.com/sites/gatsbyboilerplate/deploys)
 [![Build Status](https://img.shields.io/travis/diegonvs/gatsby-boilerplate/master.svg?style=flat)](https://travis-ci.org/diegonvs/gatsby-boilerplate)
 [![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com/)
 
