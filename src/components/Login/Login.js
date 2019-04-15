@@ -1,5 +1,5 @@
 import React from 'react';
-import { handleLogin, handleSignUp, logout, isLoggedIn, isBrowser } from '../../services/auth'
+import { handleLogin, logout, isLoggedIn, isBrowser } from '../../services/auth'
 import { navigate } from 'gatsby';
 
 class Login extends React.Component {
