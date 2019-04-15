@@ -2892,10 +2892,10 @@ classnames@2.2.6:
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
-clay-component@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.9.0.tgz#2da0ead5cc13708fe40812550d91c34afe5afbd4"
-  integrity sha512-RpyprCo8zMNwQ0vlMEsroTA25pb7qCCVNefHIklIUAT+0i9oVi7ZuBZ0qcpTkWCJv8CCpK5X0htm1g6T590hOQ==
+clay-component@2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/clay-component/-/clay-component-2.13.0.tgz#f0ffcba472cc98e69440f38cd85bdd6643597c2e"
+  integrity sha512-qryqPpncpb5ShUHznTPhNYqDxZLuEkzh0bbfLD4beszl5LThrrYrDyTgWrOjLc2UGdm3m90dtX0DfYEdXkWHSg==
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
