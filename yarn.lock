@@ -2667,10 +2667,10 @@ clay-css@2.14.0:
   resolved "https://registry.yarnpkg.com/clay-css/-/clay-css-2.14.0.tgz#89109388fd206e05622cf71beb66fab04e544b93"
   integrity sha512-D80WZchgmWvUJF7e5WNo+zPgqYB6qkpXMI13aNjNsJXJOZF4+a/6ggmGOfBj62AC/LoikLMu9czlFi7DOOIvww==
 
-clay-tooltip@2.14.0:
-  version "2.14.0"
-  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.14.0.tgz#3e54738dd47b7c8ecd98e4e9055b55799d9ac6f0"
-  integrity sha512-XjrYnSg4WHZx+lMUXQLRDACvmMwiVIqUPGdo7Ajc6Sx3xh1kaVtEl68KiBlOV/mlDbQn0E1EThnZL7l6zow/9w==
+clay-tooltip@2.14.2:
+  version "2.14.2"
+  resolved "https://registry.yarnpkg.com/clay-tooltip/-/clay-tooltip-2.14.2.tgz#24ced266cae3b38e0152f062ce5dabd5bc8f9834"
+  integrity sha512-MasDi1cP3uJ0tyU/+O+XidzwLpSipRam54CZRblie0Vt6lUcl788+eSaIPonXJBloI0Xd50dIRBrQEMLsLAdkQ==
   dependencies:
     metal "^2.16.0"
     metal-component "^2.16.0"
