@@ -47,6 +47,10 @@ footer {
 				width: 16px;
 			}
 		}
+
+		.sticker-secondary {
+			@include clay-link($social-icons-link-sticker);
+		}
 	}
 
 	.row {

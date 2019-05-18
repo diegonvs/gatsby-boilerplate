@@ -39,3 +39,15 @@ $screen-sm: 900px;
 $screen-xs: 768px;
 
 $grid-float-breakpoint: $screen-sm;
+
+// Footer
+
+$social-icons-link-sticker: () !default;
+$social-icons-link-sticker: map-merge((
+	bg: $secondary-l1,
+	border-radius: 100px,
+	color: $white,
+	font-size: 14.5px,
+	hover-bg: $secondary,
+	focus-bg: $secondary,
+), $social-icons-link-sticker);
