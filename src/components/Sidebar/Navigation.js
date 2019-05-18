@@ -4,6 +4,7 @@ import { Link, withPrefix } from "gatsby"
 
 class Navigation extends React.Component {
     _handleOnClick(index, depth, section, event) {
+        event.preventDefault();
         event.stopPropagation();
 
         const elementRef = this.refs[`navItem${index}${depth}`];
@@ -35,8 +36,8 @@ class Navigation extends React.Component {
             });
 
             return(
-                <li key={index} ref={`navItem${index}${depth}`} className={style} onClick={this._handleOnClick.bind(this, index, depth, section)}>
-                    <Anchor page={section} />
+                <li key={index} ref={`navItem${index}${depth}`} className={style}>
+                    <Anchor page={section} onclick={this._handleOnClick.bind(this, index, depth, section)} />
 
                     {section.items && (
                         <Navigation sectionList={section.items} location={location} depth={depth + 1} />
@@ -55,10 +56,10 @@ class Navigation extends React.Component {
     }
 }
 
-const Anchor = ({page}) => {
+const Anchor = ({page, onclick}) => {
     if (page.items) {
         return(
-            <a className="align-middle" href="#no">
+            <a className="align-middle" href="#no" onClick={onclick}>
                 <span>{page.title}</span>
                 <svg className="collapse-toggle clay-icon icon-monospaced">
                     <use xlinkHref={withPrefix("images/icons/icons.svg#caret-bottom")} />
