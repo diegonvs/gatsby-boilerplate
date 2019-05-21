@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import { Link, withPrefix } from "gatsby"
 
 class Navigation extends React.Component {
