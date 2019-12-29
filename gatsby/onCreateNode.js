@@ -1,23 +1,23 @@
-module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
+module.exports = exports.onCreateNode = ({actions, getNode, node}) => {
 	const {createNodeField} = actions;
 
 	if (node.internal.type === 'Mdx') {
 		const {
 			alwaysActive,
-			path,
-			redirect,
-			title,
-			order,
+			author,
+			banner,
 			date,
 			description,
-			author,
 			mainPage,
-			banner,
-			stepNumber,
-			short,
 			needsAuth,
+			order,
+			path,
+			redirect,
+			short,
+			stepNumber,
+			title,
 			updates,
-			url
+			url,
 		} = node.frontmatter;
 
 		const {relativePath} = getNode(node.parent);
@@ -41,87 +41,87 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 		});
 
 		createNodeField({
-			node,
 			name: 'slug',
+			node,
 			value: slug,
 		});
 
 		createNodeField({
-			node,
 			name: 'title',
+			node,
 			value: title,
 		});
 
 		createNodeField({
-			node,
 			name: 'order',
+			node,
 			value: order,
 		});
 
 		createNodeField({
-			node,
 			name: 'redirect',
+			node,
 			value: redirect,
 		});
 
 		createNodeField({
-			node,
 			name: 'author',
+			node,
 			value: author || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'date',
+			node,
 			value: date || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'description',
+			node,
 			value: description || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'mainPage',
+			node,
 			value: mainPage || false,
 		});
 
 		createNodeField({
-			node,
 			name: 'banner',
+			node,
 			value: banner || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'stepNumber',
+			node,
 			value: stepNumber || 0,
 		});
 
 		createNodeField({
-			node,
 			name: 'short',
+			node,
 			value: short || '',
 		});
 
 		createNodeField({
-			node,
 			name: 'needsAuth',
+			node,
 			value: needsAuth || 0,
 		});
 
 		createNodeField({
-			node,
 			name: 'updates',
+			node,
 			value: updates || [],
 		});
 
 		createNodeField({
-			node,
 			name: 'url',
+			node,
 			value: url || [],
-		})
+		});
 	}
 };

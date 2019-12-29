@@ -7,13 +7,15 @@ const createPages = (actions, edges) => {
 	const {createPage, createRedirect} = actions;
 
 	edges.forEach(({node}, index) => {
-		const {slug, redirect, mainPage} = node.fields;
+		const {mainPage, redirect, slug} = node.fields;
 
 		const templateKey = slug.split('/')[0];
 
 		if (redirect || mainPage) {
 			const slugWithBar = slug.startsWith('/') ? slug : `/${slug}`;
-			const fromPath = slugWithBar.endsWith('index.html') ? slugWithBar.replace('index.html', '') : slugWithBar;
+			const fromPath = slugWithBar.endsWith('index.html')
+				? slugWithBar.replace('index.html', '')
+				: slugWithBar;
 
 			const toPath = mainPage ? slugWithBar : redirect;
 
@@ -21,26 +23,30 @@ const createPages = (actions, edges) => {
 				fromPath,
 				isPermanent: true,
 				redirectInBrowser: true,
-				toPath: toPath,
+				toPath,
 			});
 		}
 
 		if (!redirect) {
-            let previous = index === 0 ? false : edges[index - 1].node;
-            let next = index === edges.length - 1 ? false : edges[index + 1].node;
+			const previous = index === 0 ? false : edges[index - 1].node;
+			const next =
+				index === edges.length - 1 ? false : edges[index + 1].node;
 
-            createPage({
-				path: slug,
+			createPage({
 				component: componentWithMDXScope(
-					path.resolve(__dirname, `../src/templates/${templateKey}.js`),
+					path.resolve(
+						__dirname,
+						`../src/templates/${templateKey}.js`
+					),
 					node.code.scope,
-					__dirname,
+					__dirname
 				),
 				context: {
-					slug,
-					previous,
 					next,
+					previous,
+					slug,
 				},
+				path: slug,
 			});
 		}
 	});
@@ -55,7 +61,7 @@ module.exports = async ({actions, graphql}) => {
 
 	return graphql(`
 		query {
-			allMdx(sort: {order:ASC, fields: frontmatter___stepNumber}) {
+			allMdx(sort: {order: ASC, fields: frontmatter___stepNumber}) {
 				edges {
 					node {
 						fields {

@@ -7,11 +7,12 @@ short: Clone
 
 ## Github
 
-Clone the project by running one of these commands: 
+Clone the project by running one of these commands:
 
 ```bash http
 git clone https://github.com/diegonvs/gatsby-boilerplate.git
 ```
+
 ```bash ssh
 git clone git@github.com:diegonvs/gatsby-boilerplate.git
 ```
@@ -20,7 +21,7 @@ After the clone succeeds, navigate to `gatsby-boilerplate/` on your machine and 
 
 ## Gatsby CLI
 
-If you have Gatsby installed globally, use the Gatsby command line interface by running: 
+If you have Gatsby installed globally, use the Gatsby command line interface by running:
 
 ```sh
 gatsby new https://github.com/diegonvs/gatsby-boilerplate

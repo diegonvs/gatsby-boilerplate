@@ -1,79 +1,95 @@
+import {Link, withPrefix} from 'gatsby';
 import React from 'react';
-import { Link, withPrefix } from "gatsby"
 
 class Navigation extends React.Component {
-    _handleOnClick(index, depth, section, event) {
-        const el = event.currentTarget;
+	_handleOnClick(index, depth, section, event) {
+		const el = event.currentTarget;
 
-        event.preventDefault();
-        event.stopPropagation();
+		event.preventDefault();
+		event.stopPropagation();
 
-        el.classList.toggle('active');
-    }
+		el.classList.toggle('active');
+	}
 
-    _isActive(section) {
-        const { location } = this.props;
+	_isActive(section) {
+		const {location} = this.props;
 
-        const sectionLocation = location.pathname.split('.')[0];
+		const sectionLocation = location.pathname.split('.')[0];
 
-        if (section.isFolder) {
-            return sectionLocation.includes(section.id);
-        }
+		if (section.isFolder) {
+			return sectionLocation.includes(section.id);
+		}
 
-        return sectionLocation === section.link;
-    }
+		return sectionLocation === section.link;
+	}
 
-    renderNavigationItems() {
-        const { sectionList, location, depth = 0 } = this.props;
+	renderNavigationItems() {
+		const {depth = 0, location, sectionList} = this.props;
 
-        return sectionList.map((section, index) => {
-            let style = section.items ? 'nav-heading nav-item' : 'nav-item';
+		return sectionList.map((section, index) => {
+			const style = section.items ? 'nav-heading nav-item' : 'nav-item';
 
-            return(
-                <li key={index} ref={`navItem${index}${depth}`} className={style}>
-                    <Anchor active={this._isActive(section)} page={section} onclick={this._handleOnClick.bind(this, index, depth, section)} />
+			return (
+				<li
+					className={style}
+					key={index}
+					ref={`navItem${index}${depth}`}
+				>
+					<Anchor
+						active={this._isActive(section)}
+						onclick={this._handleOnClick.bind(
+							this,
+							index,
+							depth,
+							section
+						)}
+						page={section}
+					/>
 
-                    {section.items && (
-                        <Navigation sectionList={section.items} location={location} depth={depth + 1} />
-                    )}
-                </li>
-            );
-        });
-    }
+					{section.items && (
+						<Navigation
+							depth={depth + 1}
+							location={location}
+							sectionList={section.items}
+						/>
+					)}
+				</li>
+			);
+		});
+	}
 
-    render() {
-        return(
-            <ul className="nav nav-stacked">
-                {this.renderNavigationItems()}
-            </ul>
-        );
-    }
+	render() {
+		return (
+			<ul className="nav nav-stacked">{this.renderNavigationItems()}</ul>
+		);
+	}
 }
 
-const Anchor = ({active, page, onclick}) => {
-    let style = active ? 'active nav-link ' : 'nav-link ';
+const Anchor = ({active, onclick, page}) => {
+	let style = active ? 'active nav-link ' : 'nav-link ';
 
-    if (page.items) {
-        style += 'collapse-toggle';
+	if (page.items) {
+		style += 'collapse-toggle';
 
-        return(
-            <a className={style} href="#no" onClick={onclick}>
-                <span>{page.title}</span>
-                <svg className="lexicon-icon lexicon-icon-caret-bottom">
-                    <use xlinkHref={withPrefix("images/icons/icons.svg#caret-bottom")} />
-                </svg>
-            </a>
-        );
-    }
+		return (
+			<a className={style} href="#no" onClick={onclick}>
+				<span>{page.title}</span>
+				<svg className="lexicon-icon lexicon-icon-caret-bottom">
+					<use
+						xlinkHref={withPrefix(
+							'images/icons/icons.svg#caret-bottom'
+						)}
+					/>
+				</svg>
+			</a>
+		);
+	}
 
-    return (
-        <Link
-            to={`${page.link}.html`}
-            className={style}
-        >
-            <span>{page.title}</span>
-        </Link>
-    );
+	return (
+		<Link className={style} to={`${page.link}.html`}>
+			<span>{page.title}</span>
+		</Link>
+	);
 };
 
 export default Navigation;

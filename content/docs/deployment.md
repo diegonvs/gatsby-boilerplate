@@ -1,5 +1,5 @@
 ---
-title: "Deployment"
+title: 'Deployment'
 order: 4
 ---
 
@@ -10,6 +10,7 @@ Hey, it's great to see you here! 💖
 Here, in this article, I'll teach you how to deploy your website started from Gatsby Boilerplate on [WeDeploy](https://wedeploy.com).
 
 > # TL;DR
+>
 > This guide teach you how to deploy using WeDeploy, but you can use the same strategy of deployment exposing `public` folder to your favorite host folder.
 
 ### WeDeploy
@@ -37,12 +38,12 @@ Here, in this article, I'll teach you how to deploy your website started from Ga
 
 ```json
 {
-    "id": "<your-auth-service-id>",
-    "image": "wedeploy/auth:2.8.0",
-    "env": {
-        "WEDEPLOY_AUTH_SECURE_FIELDS": "providers, email, password, resetKey, supportedScopes",
-        "WEDEPLOY_AUTH_PASSWORD": "true"
-    }
+	"id": "<your-auth-service-id>",
+	"image": "wedeploy/auth:2.8.0",
+	"env": {
+		"WEDEPLOY_AUTH_SECURE_FIELDS": "providers, email, password, resetKey, supportedScopes",
+		"WEDEPLOY_AUTH_PASSWORD": "true"
+	}
 }
 ```
 
@@ -52,6 +53,6 @@ For more information configuring this `wedeploy.json` for auth service, check th
 
 _Considering that you have installed `wedeploy` command line interface, if not, check this [link](https://wedeploy.com/docs/intro/using-the-command-line/)_
 
-Just fire 'we deploy' on `public/` and on `public/auth` folder to deploy your Gatsby Boilerplate instance to the cloud and see magic happening 
+Just fire 'we deploy' on `public/` and on `public/auth` folder to deploy your Gatsby Boilerplate instance to the cloud and see magic happening
 
 🔥 🔥 🔥 🔥 🔥 🌈 🌈 🌈 🌈 🌈

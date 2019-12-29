@@ -1,39 +1,68 @@
+import {withPrefix} from 'gatsby';
 import React from 'react';
-import { withPrefix } from 'gatsby';
 
 class HTML extends React.Component {
-    render() {
-        return(
-            <html lang="en">
-                <head>
-                    <meta charSet="utf-8" />
-                    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-                    <meta
-                        name="viewport"
-                        content="width=device-width, initial-scale=1.0"
-                    />
-                    <link rel="shortcut icon" type="image/png" href={withPrefix("favicons/favicon-32x32.png")} sizes="16x16 32x32" />
-                    <link rel="apple-touch-icon" sizes="180x180" href={withPrefix("favicons/apple-touch-icon.png")} />
-                    <link rel="icon" type="image/png" sizes="32x32" href={withPrefix("favicons/favicon-32x32.png")} />
-                    <link rel="icon" type="image/png" sizes="16x16" href={withPrefix("favicons/favicon-16x16.png")} />
-                    <link rel="mask-icon" href={withPrefix("/favicons/safari-pinned-tab.svg")} color="#0b5fff" />
-                    <meta name="msapplication-TileColor" content="#ffffff" />
-                    <meta name="theme-color" content="#ffffff" />
-                    {this.props.headComponents}
+	render() {
+		return (
+			<html lang="en">
+				<head>
+					<meta charSet="utf-8" />
+					<meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+					<meta
+						content="width=device-width, initial-scale=1.0"
+						name="viewport"
+					/>
+					<link
+						href={withPrefix('favicons/favicon-32x32.png')}
+						rel="shortcut icon"
+						sizes="16x16 32x32"
+						type="image/png"
+					/>
+					<link
+						href={withPrefix('favicons/apple-touch-icon.png')}
+						rel="apple-touch-icon"
+						sizes="180x180"
+					/>
+					<link
+						href={withPrefix('favicons/favicon-32x32.png')}
+						rel="icon"
+						sizes="32x32"
+						type="image/png"
+					/>
+					<link
+						href={withPrefix('favicons/favicon-16x16.png')}
+						rel="icon"
+						sizes="16x16"
+						type="image/png"
+					/>
+					<link
+						color="#0b5fff"
+						href={withPrefix('/favicons/safari-pinned-tab.svg')}
+						rel="mask-icon"
+					/>
+					<meta content="#ffffff" name="msapplication-TileColor" />
+					<meta content="#ffffff" name="theme-color" />
+					{this.props.headComponents}
 
-                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
-                </head>
-                <body {...this.props.bodyAttributes}>
-                    <div
-                        id="___gatsby"
-                        dangerouslySetInnerHTML={{ __html: this.props.body }}
-                    />
-                    {this.props.postBodyComponents}
-                    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-                </body>
-            </html>
-        );
-    }
+					<link
+						href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+						rel="stylesheet"
+					/>
+				</head>
+				<body {...this.props.bodyAttributes}>
+					<div
+						dangerouslySetInnerHTML={{__html: this.props.body}}
+						id="___gatsby"
+					/>
+					{this.props.postBodyComponents}
+					<script
+						src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+						type="text/javascript"
+					></script>
+				</body>
+			</html>
+		);
+	}
 }
 
 export default HTML;
