@@ -6,82 +6,83 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-meta-redirect',
 		{
-			resolve: 'gatsby-plugin-sass',
 			options: {
+				includePaths: clay.includePaths.concat(
+					path.join(clay.includePaths[0], 'node_modules')
+				),
 				precision: 8,
-				includePaths: clay
-					.includePaths
-					.concat(
-						path.join(
-							clay.includePaths[0],
-							'node_modules'
-						)
-					),
 			},
+			resolve: 'gatsby-plugin-sass',
 		},
 		{
-			resolve: 'gatsby-source-filesystem',
 			options: {
 				name: 'packages',
 				path: `${__dirname}/content`,
 			},
+			resolve: 'gatsby-source-filesystem',
 		},
 		{
-			resolve: 'gatsby-mdx',
 			options: {
 				extensions: ['.mdx', '.md'],
 				gatsbyRemarkPlugins: [
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-code-label-extractor'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-code-label-extractor'
+						),
 					},
 					{
-						resolve: 'gatsby-remark-prismjs',
 						pluginOptions: {
 							classPrefix: 'gatsby-code-',
 						},
+						resolve: 'gatsby-remark-prismjs',
 					},
 					{
-						resolve: path.resolve(__dirname, './plugins/gatsby-remark-use-clipboard'),
+						resolve: path.resolve(
+							__dirname,
+							'./plugins/gatsby-remark-use-clipboard'
+						),
 					},
 				],
 			},
+			resolve: 'gatsby-mdx',
 		},
 		{
-			resolve: 'gatsby-plugin-google-analytics',
 			options: {
 				trackingId: process.env.GA_TRACKING_ID,
 			},
+			resolve: 'gatsby-plugin-google-analytics',
 		},
 		'gatsby-plugin-react-helmet',
 		{
-			resolve: 'gatsby-plugin-manifest',
 			options: {
-				name: 'Gatsby Boilerplate',
-				short_name: 'Gatsby Boilerplate',
-				start_url: '/',
 				background_color: '#FFFFFF',
-				theme_color: '#0B5FFF',
 				display: 'minimal-ui',
 				icons: [
 					{
-						"src": "favicons/android-chrome-192x192.png",
-						"sizes": "192x192",
-						"type": "image/png"
+						sizes: '192x192',
+						src: 'favicons/android-chrome-192x192.png',
+						type: 'image/png',
 					},
 					{
-						"src": "favicons/android-chrome-512x512.png",
-						"sizes": "512x512",
-						"type": "image/png"
-					}
-				]
+						sizes: '512x512',
+						src: 'favicons/android-chrome-512x512.png',
+						type: 'image/png',
+					},
+				],
+				name: 'Gatsby Boilerplate',
+				short_name: 'Gatsby Boilerplate',
+				start_url: '/',
+				theme_color: '#0B5FFF',
 			},
+			resolve: 'gatsby-plugin-manifest',
 		},
 		{
-			resolve: 'gatsby-plugin-offline',
 			options: {
 				globPatterns: ['**/*.{js,jpg,png,gif,html,css,svg}'],
 			},
+			resolve: 'gatsby-plugin-offline',
 		},
-		'gatsby-plugin-zopfli'
+		'gatsby-plugin-zopfli',
 	],
 };

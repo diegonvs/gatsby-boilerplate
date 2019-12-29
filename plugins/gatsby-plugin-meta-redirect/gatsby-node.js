@@ -1,5 +1,5 @@
+const {ensureDir, exists, writeFile} = require('fs-extra');
 const path = require('path');
-const {exists, writeFile, ensureDir} = require('fs-extra');
 
 const getMetaRedirect = require('./getMetaRedirect');
 
@@ -7,6 +7,7 @@ const getMetaRedirect = require('./getMetaRedirect');
 async function writeRedirectsFile(redirects, folder, pathPrefix) {
 	if (!redirects.length) return;
 
+	// eslint-disable-next-line no-for-of-loops/no-for-of-loops
 	for (const redirect of redirects) {
 		const {fromPath, toPath} = redirect;
 
@@ -22,7 +23,9 @@ async function writeRedirectsFile(redirects, folder, pathPrefix) {
 
 		try {
 			fileExists = await exists(FILE_PATH);
-		} catch (err) {}
+		} catch (err) {
+			throw new Error(err);
+		}
 
 		if (!fileExists) {
 			try {
@@ -38,7 +41,7 @@ async function writeRedirectsFile(redirects, folder, pathPrefix) {
 }
 
 exports.onPostBuild = ({store}) => {
-	const {redirects, program, config} = store.getState();
+	const {config, program, redirects} = store.getState();
 
 	let pathPrefix = '';
 	if (program.prefixPaths) {

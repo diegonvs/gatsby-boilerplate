@@ -1,5 +1,5 @@
 ---
-title: "From Blog template"
+title: 'From Blog template'
 order: 1
 ---
 
@@ -10,16 +10,19 @@ We could migrate all our content to blog using the `content` folder as mentioned
 > Note that Electric has the same possible values to be passed to the `frontmatter` of a post.
 
 ## Electric blog frontmatter example:
+
 ```markdown
 ---
-title: "Markdown Post"
-description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-date: "February 02, 2017"
-author: "Author Name"
-layout: "blog"
+title: 'Markdown Post'
+description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+date: 'February 02, 2017'
+author: 'Author Name'
+layout: 'blog'
 ---
 ```
+
 ## Gatsby blog frontmatter example:
+
 ```markdown
 ---
 author: Diego Nascimento
@@ -33,8 +36,9 @@ title: Making sense of the SCAA’s new Flavor Wheel
 ## Changes:
 
 frontmatter:
-- `date` follow a date standard to Gatsby analyze and decode date. You can change time format on `date` query field on blog template file to another format, for example, from "MMMM DD, YYYY" to "DD MMMM, YYYY"
-- `banner` is an optional `frontmatter` that can be used to expose a banner for the post on blog list of our blog.
+
+-   `date` follow a date standard to Gatsby analyze and decode date. You can change time format on `date` query field on blog template file to another format, for example, from "MMMM DD, YYYY" to "DD MMMM, YYYY"
+-   `banner` is an optional `frontmatter` that can be used to expose a banner for the post on blog list of our blog.
 
 > Note that we don't need to pass our values between quotation marks
 

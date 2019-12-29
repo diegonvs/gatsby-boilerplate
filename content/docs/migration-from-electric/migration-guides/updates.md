@@ -1,5 +1,5 @@
 ---
-title: "From Updates template"
+title: 'From Updates template'
 order: 4
 ---
 
