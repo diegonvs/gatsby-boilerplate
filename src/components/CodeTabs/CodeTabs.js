@@ -3,17 +3,22 @@ import Tabs from 'metal-tabs';
 
 class CodeTabs {
 	constructor() {
-		let className = 'code-container';
+		const className = 'code-container';
 
 		let tabGroupsData = [];
-		let elements = Array.prototype.slice.call(document.querySelectorAll(`.${className}`));
+		const elements = Array.prototype.slice.call(
+			document.querySelectorAll(`.${className}`)
+		);
 		elements.forEach(element => {
 			tabGroupsData.push({
+				element,
 				label: this._getTabLabelFromElement(element),
-				element: element,
 			});
 
-			if (!element.nextElementSibling || !dom.hasClass(element.nextElementSibling, className)) {
+			if (
+				!element.nextElementSibling ||
+				!dom.hasClass(element.nextElementSibling, className)
+			) {
 				if (tabGroupsData.length > 1) {
 					this._renderTabs(tabGroupsData);
 				}
@@ -31,20 +36,23 @@ class CodeTabs {
 	}
 
 	_hideAll(tabs) {
-		tabs.forEach((tab) => {
+		tabs.forEach(tab => {
 			this._hide(tab.element);
 		});
 	}
 
 	_renderTabs(data) {
-		let container = dom.buildFragment('<div class="tabContainer"></div>');
-		let tabsComponent = new Tabs({
-			elementClasses: 'nav-code-tabs',
-			tabs: data,
-		}, container);
+		const container = dom.buildFragment('<div class="tabContainer"></div>');
+		const tabsComponent = new Tabs(
+			{
+				elementClasses: 'nav-code-tabs',
+				tabs: data,
+			},
+			container
+		);
 
 		tabsComponent.on('changeRequest', event => {
-			let currentTab = event.state.tab;
+			const currentTab = event.state.tab;
 			this._hideAll(tabsComponent.tabs);
 			this._show(tabsComponent.tabs[currentTab].element);
 		});

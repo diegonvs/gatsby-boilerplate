@@ -1,17 +1,24 @@
+stages:
+  - smoke
+  - lint
+
 language: node_js
-node_js: '9'
+node_js: '8'
 
 before_install:
-  - nvm install 9
+  - nvm install 8
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.12.1
   - export PATH=$HOME/.yarn/bin:$PATH
 
-cache:
-  yarn: true
+cache: yarn
 
 install:
   - yarn
 
-script:
-  - rm -rf public/ .cache/
-  - yarn build
+jobs:
+  include:
+    - stage: smoke
+      install: rm -rf public/ .cache/ && yarn
+      script: yarn build
+    - stage: lint
+      script: yarn format:check && yarn lint

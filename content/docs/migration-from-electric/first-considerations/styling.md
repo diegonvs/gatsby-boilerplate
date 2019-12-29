@@ -1,5 +1,5 @@
 ---
-title: "Styling"
+title: 'Styling'
 order: 2
 ---
 

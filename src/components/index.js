@@ -8,4 +8,14 @@ import Sidebar from './Sidebar';
 import SimpleFooter from './SimpleFooter';
 import Typography from './Typography';
 
-export default {BlogList, CodeClipboard, CodeTabs, Footer, Icon, LayoutNav, Sidebar, SimpleFooter, Typography};
+export default {
+	BlogList,
+	CodeClipboard,
+	CodeTabs,
+	Footer,
+	Icon,
+	LayoutNav,
+	Sidebar,
+	SimpleFooter,
+	Typography,
+};
