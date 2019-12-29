@@ -20,6 +20,5 @@ jobs:
     - stage: smoke
       install: rm -rf public/ .cache/ && yarn
       script: yarn build
-  include:
     - stage: lint
       script: yarn format:check && yarn lint
