@@ -19,7 +19,3 @@ If you want to check the documentation 📚 click on this [link](https://github.
 2. Navigate to project folder and run `yarn`
 3. Run `npm run develop` or `yarn develop` for development mode or run `npm run build` or `yarn build` for production mode
 4. If you want serve your production build just run `npm run serve` or `yarn serve`
-
-## License
-
-[BSD License](https://github.com/metal/metal.js/blob/master/LICENSE.md) © Liferay, Inc.
