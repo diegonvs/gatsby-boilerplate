@@ -20,12 +20,19 @@ module.exports = exports.onCreateNode = ({ node, actions, getNode}) => {
 			url
 		} = node.frontmatter;
 
-		const {relativePath} = getNode(node.parent);
+		const fileNode = getNode(node.parent)
 
 		let slug = path;
 
 		if (!slug) {
-			slug = relativePath.replace('.md', '.html');
+
+			if(fileNode.extension == 'md'){
+				slug = fileNode.relativePath.replace('.md', '.html');
+
+			}else if (fileNode.extension == 'mdx'){
+				slug = fileNode.relativePath.replace('.mdx', '.html');
+			}
+
 		}
 
 		createNodeField({
