@@ -36,7 +36,7 @@
     "clay-css": "2.14.2",
     "clay-tooltip": "2.15.1",
     "gatsby": "2.0.104",
-    "gatsby-mdx": "0.1.4",
+    "gatsby-mdx": "0.6.3",
     "gatsby-plugin-google-analytics": "2.0.12",
     "gatsby-plugin-manifest": "2.0.15",
     "gatsby-plugin-offline": "2.0.22",
